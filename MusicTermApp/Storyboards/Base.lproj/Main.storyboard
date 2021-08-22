@@ -34,6 +34,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58q-UX-unD">
                                 <rect key="frame" x="344" y="782" width="30" height="30"/>
+                                <connections>
+                                    <action selector="TappedSettingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5O-NF-9fe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
