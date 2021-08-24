@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-var uid = "a"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

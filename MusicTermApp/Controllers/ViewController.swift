@@ -42,13 +42,11 @@ class ViewController: UIViewController {
     private func presentToHomeViewController() {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let homeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
-        homeViewController.modalPresentationStyle = .fullScreen
         homeViewController.user = user
-        self.present(homeViewController, animated: true, completion:  nil)
+        navigationController?.pushViewController(homeViewController, animated: true)
     }
     
     private func fetchUserInfoFromFirebase() {
-        let userRef = Firestore.firestore().collection("users").document(uid)
         userRef.getDocument { (document, err) in
             if let document = document, document.exists {
                 guard let data = document.data() else { return }
@@ -60,7 +58,7 @@ class ViewController: UIViewController {
     }
     
     private func addNewUserInfoToFirebase(userRef: DocumentReference) {
-        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし"] as [String : Any]
+        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "imageNumber": 1] as [String : Any]
         userRef.setData(newData){(err) in
             if let err = err {
                 print("Firestoreへの保存に失敗しました。\(err)")

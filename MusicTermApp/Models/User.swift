@@ -14,6 +14,7 @@ struct User {
     var totalScore: Int
     var bestScore: Int
     var level: String
+    var imageNumber: Int
     
     
     init(dic: [String: Any]) {
@@ -21,6 +22,7 @@ struct User {
         self.totalScore = dic["totalScore"] as! Int
         self.bestScore = dic["bestScore"] as! Int
         self.level = dic["level"] as! String
+        self.imageNumber = dic["imageNumber"] as! Int
     }
 }
 
