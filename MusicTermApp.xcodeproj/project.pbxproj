@@ -114,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				6A9A22A126D207D900CBD801 /* UIColorExtensionRGB.swift */,
-				6A9A22B326D56DBA00CBD801 /* Helper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -143,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				6A9A22A626D2387000CBD801 /* User.swift */,
+				6A9A22B326D56DBA00CBD801 /* Helper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

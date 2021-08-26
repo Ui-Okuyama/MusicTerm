@@ -9,7 +9,6 @@ import Foundation
 import Firebase
 
 struct User {
-    let id = uid
     var name: String
     var totalScore: Int
     var bestScore: Int

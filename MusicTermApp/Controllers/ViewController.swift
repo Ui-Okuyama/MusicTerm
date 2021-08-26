@@ -28,9 +28,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        DispatchQueue.main.async {
-            self.fetchUserInfoFromFirebase()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.signInFirebaseAnonymouslyUser()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
 
     private func setupViews() {
@@ -46,12 +50,29 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(homeViewController, animated: true)
     }
     
+    private func signInFirebaseAnonymouslyUser() {
+        Auth.auth().signInAnonymously() { (authResult, error) in
+            if error != nil {
+                print("Auth Error :\(error!.localizedDescription)")
+            }
+            // 認証情報の取得
+            guard let user = authResult?.user else { return }
+            _ = user.isAnonymous  // true
+            UserDefaults.standard.set(user.uid, forKey: "uid")
+            print(UserDefaults.standard.string(forKey: "uid")!)
+            self.fetchUserInfoFromFirebase()
+        }
+    }
+    
     private func fetchUserInfoFromFirebase() {
+        let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.getDocument { (document, err) in
             if let document = document, document.exists {
                 guard let data = document.data() else { return }
+                print(UserDefaults.standard.string(forKey: "uid")!)
                 self.user = User.init(dic: data)
             } else {
+                print("データなし新規作成へ")
                 self.addNewUserInfoToFirebase(userRef: userRef)
             }
         }

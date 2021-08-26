@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 import Firebase
 
-let userRef = Firestore.firestore().collection("users").document(uid)
+
 var uid = "a"

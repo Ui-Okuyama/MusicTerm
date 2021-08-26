@@ -40,6 +40,7 @@ class ProfileEditController: UIViewController {
     }
     
     private func updateFirestoreData() {
+        let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.updateData(["name" : nameTextField.text!]) { err in
             if let err = err {
                 print("Error updating document: \(err)")

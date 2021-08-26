@@ -27,7 +27,6 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHomeViews()
-        navigationController?.navigationBar.isHidden = true
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedProfileView(_:)))
         self.profileView.addGestureRecognizer(tapGesture)
@@ -35,12 +34,31 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         tapGesture.delegate = self
             }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        fetchUserInfoFromFirebase()
+    }
+    
+    private func fetchUserInfoFromFirebase() {
+        let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
+        userRef.getDocument { [self] (document, err) in
+            if let err = err {
+                print("ユーザー情報の取得に失敗しました。\(err)")
+            }
+            guard let data = document!.data() else { return }
+            self.user = User.init(dic: data)
+            userName.text = user?.name
+            levelLabel.text = user?.level
+            totalScoreLabel.text = "総スコア：" + String(user!.totalScore)
+            bestScoreLabel.text = "ベストスコア：" + String(user!.bestScore)
+            print(self.user!.name)
+        }
+    }
+    
     private func setupHomeViews() {
         self.view.sendSubviewToBack(profileView)
-        userName.text = user?.name
-        levelLabel.text = user?.level
-        totalScoreLabel.text = "総スコア：" + String(user!.totalScore)
-        bestScoreLabel.text = "ベストスコア：" + String(user!.bestScore)
+        print("setup")
         
         difficultyButton1.layer.cornerRadius = 20
         difficultyButton2.layer.cornerRadius = 20
