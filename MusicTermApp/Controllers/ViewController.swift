@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     }
     
     private func addNewUserInfoToFirebase(userRef: DocumentReference) {
-        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "imageNumber": 1] as [String : Any]
+        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "imageNumber": 1, "images": ["mozart", "J.S.Bach", "beethoven", "Debussy", "Tchaikovsky", "chopin"]] as [String : Any]
         userRef.setData(newData){(err) in
             if let err = err {
                 print("Firestoreへの保存に失敗しました。\(err)")
@@ -87,6 +87,7 @@ class ViewController: UIViewController {
         return
         }
         user = User.init(dic: newData)
+        print(user!.name)
     }
 }
 

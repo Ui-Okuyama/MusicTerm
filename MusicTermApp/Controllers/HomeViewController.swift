@@ -52,6 +52,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             levelLabel.text = user?.level
             totalScoreLabel.text = "総スコア：" + String(user!.totalScore)
             bestScoreLabel.text = "ベストスコア：" + String(user!.bestScore)
+            UserDefaults.standard.set(user?.images, forKey: "images")
             print(self.user!.name)
         }
     }

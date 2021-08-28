@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 import Firebase
 
-class ProfileEditController: UIViewController {
+class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
     var user:User?
+    var images:Array<String>?
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -22,9 +23,18 @@ class ProfileEditController: UIViewController {
         updateFirestoreData()
         navigationController?.popViewController(animated: true)
     }
+    @IBAction func tappedChangeImageButton(_ sender: Any) {
+        performSegue(withIdentifier: "ModalProfileSegue", sender: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        
+        profileImage.isUserInteractionEnabled = true
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedProfileImage(_:)))
+        profileImage.addGestureRecognizer(tapGesture)
+            
+        tapGesture.delegate = self
     }
     
     private func setupViews() {
@@ -37,6 +47,10 @@ class ProfileEditController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    @objc func tappedProfileImage(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "ModalProfileSegue", sender: nil)
     }
     
     private func updateFirestoreData() {

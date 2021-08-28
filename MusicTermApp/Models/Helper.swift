@@ -8,6 +8,3 @@
 import Foundation
 import UIKit
 import Firebase
-
-
-var uid = "a"
