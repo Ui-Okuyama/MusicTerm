@@ -13,7 +13,7 @@ struct User {
     var totalScore: Int
     var bestScore: Int
     var level: String
-    var imageNumber: Int
+    var currentImage: String
     var images: Array<String>
     
     
@@ -22,7 +22,7 @@ struct User {
         self.totalScore = dic["totalScore"] as! Int
         self.bestScore = dic["bestScore"] as! Int
         self.level = dic["level"] as! String
-        self.imageNumber = dic["imageNumber"] as! Int
+        self.currentImage = dic["currentImage"] as! String
         self.images = dic["images"] as! Array
     }
 }

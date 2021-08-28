@@ -36,9 +36,15 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let fontsize = Int(startButton.frame.size.height) / 2
+        startButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
+    }
 
     private func setupViews() {
-        startButton.layer.cornerRadius = 20
+        startButton.layer.cornerRadius = 30
         let icon = UIImage(systemName: "gearshape.fill")
         settingButton.setImage(icon, for: .normal)
     }
@@ -79,7 +85,7 @@ class ViewController: UIViewController {
     }
     
     private func addNewUserInfoToFirebase(userRef: DocumentReference) {
-        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "imageNumber": 1, "images": ["mozart", "J.S.Bach", "beethoven", "Debussy", "Tchaikovsky", "chopin"]] as [String : Any]
+        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "currentImage": "mozart", "images": ["mozart", "J.S.Bach", "beethoven", "Debussy", "Tchaikovsky", "chopin"]] as [String : Any]
         userRef.setData(newData){(err) in
             if let err = err {
                 print("Firestoreへの保存に失敗しました。\(err)")

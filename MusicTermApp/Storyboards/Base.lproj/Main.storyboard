@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gS9-4U-1S3">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,13 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPH-Sm-h0x">
-                                <rect key="frame" x="82" y="602" width="250" height="60"/>
+                                <rect key="frame" x="205" y="1066.5" width="614" height="109.5"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="P5Y-aE-GkT"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="e9d-pg-rjh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="26.5"/>
                                 <state key="normal" title="はじめる">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -33,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58q-UX-unD">
-                                <rect key="frame" x="344" y="782" width="30" height="30"/>
+                                <rect key="frame" x="954" y="1266" width="30" height="30"/>
                                 <connections>
                                     <action selector="TappedSettingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5O-NF-9fe"/>
                                 </connections>
@@ -44,8 +40,10 @@
                         <constraints>
                             <constraint firstItem="wPH-Sm-h0x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5bl-r3-UdZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="58q-UX-unD" secondAttribute="bottom" constant="50" id="84L-qe-wd2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wPH-Sm-h0x" secondAttribute="bottom" constant="200" id="Mdx-ma-S6h"/>
+                            <constraint firstItem="wPH-Sm-h0x" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="Cmn-g7-Wk9"/>
+                            <constraint firstItem="wPH-Sm-h0x" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="Ree-9p-v6K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="58q-UX-unD" secondAttribute="trailing" constant="40" id="mTc-tn-xgb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wPH-Sm-h0x" secondAttribute="bottom" constant="170" id="nqY-Kg-smv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vju-Eh-cJc"/>
@@ -64,7 +62,7 @@
                 <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gS9-4U-1S3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BT0-uq-7t8">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

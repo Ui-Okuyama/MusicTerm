@@ -13,6 +13,10 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
     var user:User?
     var images:Array<String>?
     
+    @IBOutlet weak var iconName: UILabel!
+    @IBOutlet weak var level: UILabel!
+    @IBOutlet weak var totalscore: UILabel!
+    @IBOutlet weak var bestscore: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var levelLabel: UILabel!
@@ -24,7 +28,7 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func tappedChangeImageButton(_ sender: Any) {
-        performSegue(withIdentifier: "ModalProfileSegue", sender: nil)
+        presentToModalView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +41,30 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
         tapGesture.delegate = self
     }
     
+    override func viewWillLayoutSubviews() {
+        labelAndButtonResize()
+    }
+    
     private func setupViews() {
         nameTextField.text = user!.name
         levelLabel.text = user!.level
         totalscoreLabel.text = String(user!.totalScore)
         bestscoreLabel.text = String(user!.bestScore)
         saveButton.layer.cornerRadius = 20
+        profileImage.image = UIImage(named: user!.currentImage)
+    }
+    
+    func fetchUserInfoFromFirebase() {
+        let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
+        userRef.getDocument { [self] (document, err) in
+            if let err = err {
+                print("ユーザー情報の取得に失敗しました。\(err)")
+            }
+            guard let data = document!.data() else { return }
+            self.user = User.init(dic: data)
+            profileImage.image = UIImage(named: user!.currentImage)
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -50,7 +72,7 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func tappedProfileImage(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "ModalProfileSegue", sender: nil)
+        presentToModalView()
     }
     
     private func updateFirestoreData() {
@@ -62,5 +84,32 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
                 print("Document successfully updated")
             }
         }
+    }
+    
+    private func presentToModalView() {
+        let modalView = storyboard?.instantiateViewController(identifier: "ModalProfileViewController") as! ModalProfileViewController
+        modalView.presentationController?.delegate = self
+        present(modalView, animated: true, completion: nil)
+    }
+    
+    private func labelAndButtonResize() {
+        let vHeight = self.view.bounds.height
+        iconName.font = iconName.font.withSize(vHeight / 25.5)
+        level.font = level.font.withSize(vHeight / 44)
+        totalscore.font = totalscore.font.withSize(vHeight / 44)
+        bestscore.font = bestscore.font.withSize(vHeight / 44)
+        levelLabel.font = levelLabel.font.withSize(vHeight / 21)
+        totalscoreLabel.font = totalscoreLabel.font.withSize(vHeight / 17)
+        bestscoreLabel.font = bestscoreLabel.font.withSize(vHeight / 17)
+        let fontsize = Int(saveButton.frame.size.height) / 2
+        saveButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
+        nameTextField.font = nameTextField.font?.withSize(vHeight / 16.5)
+    }
+    
+}
+
+extension ProfileEditController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        fetchUserInfoFromFirebase()
     }
 }

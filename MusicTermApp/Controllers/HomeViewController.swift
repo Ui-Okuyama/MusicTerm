@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var bestScoreLabel: UILabel!
+    @IBOutlet weak var level: UILabel!
     @IBOutlet weak var difficultyButton1: UIButton!
     @IBOutlet weak var difficultyButton2: UIButton!
     @IBOutlet weak var difficultyButton3: UIButton!
@@ -40,6 +41,24 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         fetchUserInfoFromFirebase()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        labelAndButtonResize()
+    }
+    
+    private func setupHomeViews() {
+        self.view.sendSubviewToBack(profileView)
+        buttonLayout(button: difficultyButton1)
+        buttonLayout(button: difficultyButton2)
+        buttonLayout(button: difficultyButton3)
+        buttonLayout(button: difficultyButton4)
+    }
+    
+    private func buttonLayout(button: UIButton) {
+        button.layer.cornerRadius = 20
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+    }
+    
     private func fetchUserInfoFromFirebase() {
         let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.getDocument { [self] (document, err) in
@@ -52,19 +71,10 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             levelLabel.text = user?.level
             totalScoreLabel.text = "総スコア：" + String(user!.totalScore)
             bestScoreLabel.text = "ベストスコア：" + String(user!.bestScore)
+            profileImage.image = UIImage(named: user!.currentImage)
             UserDefaults.standard.set(user?.images, forKey: "images")
             print(self.user!.name)
         }
-    }
-    
-    private func setupHomeViews() {
-        self.view.sendSubviewToBack(profileView)
-        print("setup")
-        
-        difficultyButton1.layer.cornerRadius = 20
-        difficultyButton2.layer.cornerRadius = 20
-        difficultyButton3.layer.cornerRadius = 20
-        difficultyButton4.layer.cornerRadius = 20
     }
     
     @objc func tappedProfileView(_ sender: UITapGestureRecognizer) {
@@ -73,6 +83,20 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         profileEditController.modalPresentationStyle = .fullScreen
         profileEditController.user = user
         navigationController?.pushViewController(profileEditController, animated: true)
+    }
+    
+    private func labelAndButtonResize() {
+        let vHeight = self.view.bounds.height
+        userName.font = userName.font.withSize(vHeight / 25)
+        levelLabel.font = levelLabel.font.withSize(vHeight / 32)
+        bestScoreLabel.font = bestScoreLabel.font.withSize(vHeight / 56)
+        totalScoreLabel.font = totalScoreLabel.font.withSize(vHeight / 56)
+        level.font = level.font.withSize(vHeight / 64)
+        let fontsize = Int(difficultyButton1.frame.size.height) / 2
+        difficultyButton1.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
+        difficultyButton2.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
+        difficultyButton3.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
+        difficultyButton4.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
     }
     
     
