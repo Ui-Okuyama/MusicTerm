@@ -94,16 +94,16 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
     
     private func labelAndButtonResize() {
         let vHeight = self.view.bounds.height
-        iconName.font = iconName.font.withSize(vHeight / 25.5)
-        level.font = level.font.withSize(vHeight / 44)
-        totalscore.font = totalscore.font.withSize(vHeight / 44)
-        bestscore.font = bestscore.font.withSize(vHeight / 44)
-        levelLabel.font = levelLabel.font.withSize(vHeight / 21)
-        totalscoreLabel.font = totalscoreLabel.font.withSize(vHeight / 17)
-        bestscoreLabel.font = bestscoreLabel.font.withSize(vHeight / 17)
-        let fontsize = Int(saveButton.frame.size.height) / 2
+        iconName.font = iconName.font.withSize(vHeight / 28)
+        level.font = level.font.withSize(vHeight / 48)
+        totalscore.font = totalscore.font.withSize(vHeight / 48)
+        bestscore.font = bestscore.font.withSize(vHeight / 48)
+        levelLabel.font = levelLabel.font.withSize(vHeight / 25)
+        totalscoreLabel.font = totalscoreLabel.font.withSize(vHeight / 20)
+        bestscoreLabel.font = bestscoreLabel.font.withSize(vHeight / 20)
+        let fontsize = Int(saveButton.frame.size.height / 2.3)
         saveButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
-        nameTextField.font = nameTextField.font?.withSize(vHeight / 16.5)
+        nameTextField.font = nameTextField.font?.withSize(vHeight / 20)
     }
     
 }

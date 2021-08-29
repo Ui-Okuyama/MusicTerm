@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        let fontsize = Int(startButton.frame.size.height) / 2
+        let fontsize = Int(startButton.frame.size.height / 2.3)
         startButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
     }
 

@@ -87,11 +87,11 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func labelAndButtonResize() {
         let vHeight = self.view.bounds.height
-        userName.font = userName.font.withSize(vHeight / 25)
-        levelLabel.font = levelLabel.font.withSize(vHeight / 32)
-        bestScoreLabel.font = bestScoreLabel.font.withSize(vHeight / 56)
-        totalScoreLabel.font = totalScoreLabel.font.withSize(vHeight / 56)
-        level.font = level.font.withSize(vHeight / 64)
+        userName.font = userName.font.withSize(vHeight / 29)
+        levelLabel.font = levelLabel.font.withSize(vHeight / 37)
+        bestScoreLabel.font = bestScoreLabel.font.withSize(vHeight / 60)
+        totalScoreLabel.font = totalScoreLabel.font.withSize(vHeight / 60)
+        level.font = level.font.withSize(vHeight / 60)
         let fontsize = Int(difficultyButton1.frame.size.height) / 2
         difficultyButton1.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
         difficultyButton2.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
