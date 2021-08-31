@@ -21,8 +21,13 @@
 		6A9A22AD26D3713600CBD801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22AC26D3713600CBD801 /* Assets.xcassets */; };
 		6A9A22B026D3D0E900CBD801 /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22AF26D3D0E800CBD801 /* ProfileEdit.storyboard */; };
 		6A9A22B226D3D10900CBD801 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22B126D3D10900CBD801 /* ProfileEditController.swift */; };
-		6A9A22B426D56DBB00CBD801 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22B326D56DBA00CBD801 /* Helper.swift */; };
 		6A9A22B626D7FA7300CBD801 /* ModalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22B526D7FA7300CBD801 /* ModalProfileViewController.swift */; };
+		6A9A22BE26DB7F7100CBD801 /* Countdown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22BD26DB7F7000CBD801 /* Countdown.storyboard */; };
+		6A9A22C026DB7F9D00CBD801 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22BF26DB7F9D00CBD801 /* CountdownViewController.swift */; };
+		6A9A22C426DBC48B00CBD801 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22C326DBC48B00CBD801 /* Question.storyboard */; };
+		6A9A22C626DBC4C300CBD801 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22C526DBC4C300CBD801 /* QuestionViewController.swift */; };
+		6A9A22C826DD1CD700CBD801 /* quizdataEasy.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22C726DD1CD600CBD801 /* quizdataEasy.csv */; };
+		6A9A22CA26DDCB3800CBD801 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22C926DDCB3700CBD801 /* QuestionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +48,13 @@
 		6A9A22AC26D3713600CBD801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A9A22AF26D3D0E800CBD801 /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
 		6A9A22B126D3D10900CBD801 /* ProfileEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
-		6A9A22B326D56DBA00CBD801 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6A9A22B526D7FA7300CBD801 /* ModalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileViewController.swift; sourceTree = "<group>"; };
+		6A9A22BD26DB7F7000CBD801 /* Countdown.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Countdown.storyboard; sourceTree = "<group>"; };
+		6A9A22BF26DB7F9D00CBD801 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		6A9A22C326DBC48B00CBD801 /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		6A9A22C526DBC4C300CBD801 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		6A9A22C726DD1CD600CBD801 /* quizdataEasy.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quizdataEasy.csv; sourceTree = "<group>"; };
+		6A9A22C926DDCB3700CBD801 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		7B7E24B1CD873C948D14C1CB /* Pods_MusicTermApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTermApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +136,8 @@
 				6A9A229026D19E8200CBD801 /* Main.storyboard */,
 				6A9A22AA26D23E6B00CBD801 /* Home.storyboard */,
 				6A9A22AF26D3D0E800CBD801 /* ProfileEdit.storyboard */,
+				6A9A22BD26DB7F7000CBD801 /* Countdown.storyboard */,
+				6A9A22C326DBC48B00CBD801 /* Question.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -137,6 +149,8 @@
 				6A9A22A826D23E4900CBD801 /* HomeViewController.swift */,
 				6A9A22B126D3D10900CBD801 /* ProfileEditController.swift */,
 				6A9A22B526D7FA7300CBD801 /* ModalProfileViewController.swift */,
+				6A9A22BF26DB7F9D00CBD801 /* CountdownViewController.swift */,
+				6A9A22C526DBC4C300CBD801 /* QuestionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -145,7 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				6A9A22A626D2387000CBD801 /* User.swift */,
-				6A9A22B326D56DBA00CBD801 /* Helper.swift */,
+				6A9A22C726DD1CD600CBD801 /* quizdataEasy.csv */,
+				6A9A22C926DDCB3700CBD801 /* QuestionData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,8 +225,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A9A229726D19E8500CBD801 /* LaunchScreen.storyboard in Resources */,
+				6A9A22BE26DB7F7100CBD801 /* Countdown.storyboard in Resources */,
+				6A9A22C426DBC48B00CBD801 /* Question.storyboard in Resources */,
 				6A9A229F26D19F6800CBD801 /* GoogleService-Info.plist in Resources */,
 				6A9A22B026D3D0E900CBD801 /* ProfileEdit.storyboard in Resources */,
+				6A9A22C826DD1CD700CBD801 /* quizdataEasy.csv in Resources */,
 				6A9A229226D19E8200CBD801 /* Main.storyboard in Resources */,
 				6A9A22AB26D23E6B00CBD801 /* Home.storyboard in Resources */,
 				6A9A22AD26D3713600CBD801 /* Assets.xcassets in Resources */,
@@ -273,9 +291,11 @@
 				6A9A22A726D2387000CBD801 /* User.swift in Sources */,
 				6A9A22A226D207D900CBD801 /* UIColorExtensionRGB.swift in Sources */,
 				6A9A22A926D23E4900CBD801 /* HomeViewController.swift in Sources */,
+				6A9A22C026DB7F9D00CBD801 /* CountdownViewController.swift in Sources */,
+				6A9A22CA26DDCB3800CBD801 /* QuestionData.swift in Sources */,
 				6A9A22B226D3D10900CBD801 /* ProfileEditController.swift in Sources */,
-				6A9A22B426D56DBB00CBD801 /* Helper.swift in Sources */,
 				6A9A22B626D7FA7300CBD801 /* ModalProfileViewController.swift in Sources */,
+				6A9A22C626DBC4C300CBD801 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

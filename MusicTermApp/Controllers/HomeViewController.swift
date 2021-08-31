@@ -25,6 +25,19 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var levelBar: UIProgressView!
     
+    @IBAction func tappedDifficultyButton1(_ sender: Any) {
+        presentToCountdownView(quizdata: "quizdataEasy")
+    }
+    @IBAction func tappedDifficultyButton2(_ sender: Any) {
+        presentToCountdownView(quizdata: "quizdataNormal")
+    }
+    @IBAction func tappedDifficultyButton3(_ sender: Any) {
+        presentToCountdownView(quizdata: "quizdataHard")
+    }
+    @IBAction func tappedDifficultyButton4(_ sender: Any) {
+        presentToCountdownView(quizdata: "quizdataLunatic")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHomeViews()
@@ -99,7 +112,11 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         difficultyButton4.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
     }
     
+    private func presentToCountdownView(quizdata: String) {
+            let storyBoard = UIStoryboard(name: "Countdown", bundle: nil)
+            let countdownViewController = storyBoard.instantiateViewController(identifier: "CountdownViewController") as! CountdownViewController
+        countdownViewController.quizdata = quizdata
+            navigationController?.pushViewController(countdownViewController, animated: true)
+    }
     
-        
-   
 }
