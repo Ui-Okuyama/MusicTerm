@@ -72,7 +72,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gqW-f6-lFo">
                                 <rect key="frame" x="150.5" y="494.5" width="74" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.40854041889999998" green="0.80097267839999997" blue="0.11939564950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.40854041889999998" green="0.69854554929933343" blue="0.11939564950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アイコン•名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L70-2Q-3O7">
@@ -91,7 +91,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" cyan="0.78000000000000003" magenta="0.44" yellow="0.33000000000000002" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="backgroundColor" cyan="0.87679573539253719" magenta="0.54539511087057468" yellow="0.30975982025786714" black="0.34909625875538791" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
                             <constraint firstItem="FaZ-yN-QCc" firstAttribute="top" secondItem="5IA-lE-SmJ" secondAttribute="bottom" constant="18" id="5JK-0v-wbX"/>
                             <constraint firstItem="gqW-f6-lFo" firstAttribute="top" secondItem="bhp-Te-dIc" secondAttribute="bottom" id="5Oc-tm-ace"/>

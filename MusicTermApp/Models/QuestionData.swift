@@ -16,7 +16,7 @@ class QuestionData {
     var answer3: String
     
     var questionNo = 0
-    var userChoiceAnswer = ""
+    var userChoiceAnswer: String? = ""
     
     init(questionDataSourceArray: Array<String>) {
         question = questionDataSourceArray[0]
@@ -26,7 +26,7 @@ class QuestionData {
     }
     
     func isCorrect() -> Bool {
-        userChoiceAnswer == answer1
+        userChoiceAnswer! == answer1
     }
 }
 
@@ -34,7 +34,7 @@ class QuestionDataManage {
     
     static let shared = QuestionDataManage()
     var questionDataArray = [QuestionData]()
-    var nowQuestionIndex = 0
+    static var nowQuestionIndex = 0
     var oneGameQuestionsArray:ArraySlice<QuestionData> = []
     
     func loadQuestion(quizdata: String) {
@@ -59,8 +59,8 @@ class QuestionDataManage {
     }
     
     func nextQuestion() -> QuestionData {
-        let nextQuestion = oneGameQuestionsArray[nowQuestionIndex]
-        nowQuestionIndex += 1
+        let nextQuestion = oneGameQuestionsArray[QuestionDataManage.nowQuestionIndex]
+        QuestionDataManage.nowQuestionIndex += 1
         return nextQuestion
     }
 }

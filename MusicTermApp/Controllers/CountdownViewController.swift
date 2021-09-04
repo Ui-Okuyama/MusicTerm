@@ -59,15 +59,9 @@ class CountdownViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Question", bundle: nil)
         let questionViewController = storyBoard.instantiateViewController(identifier: "QuestionViewController") as! QuestionViewController
         questionViewController.questionData = questionData
-        print(questionData?.question)
+        questionViewController.quizdata = quizdata
+        print(questionData!.question)
         questionViewController.modalPresentationStyle = .fullScreen
         present(questionViewController, animated: true, completion: nil)
-    }
-    
-    private func presentToHomeViewController() {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
-        present(homeViewController, animated: true, completion: nil)
-        homeViewController.modalPresentationStyle = .fullScreen
     }
 }
