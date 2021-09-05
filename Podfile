@@ -11,6 +11,7 @@ target 'MusicTermApp' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Google-Mobile-Ads-SDK'
   pod 'RealmSwift'
 
   # Pods for MusicTermApp

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 class QuestionViewController: UIViewController {
     
@@ -32,6 +33,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var backHomeButton: UIButton!
     @IBOutlet weak var nokoriLabel: UILabel!
     @IBOutlet weak var monnLabel: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     @IBOutlet weak var answerView: UIView!
     @IBOutlet weak var correctOrFalseLabel: UILabel!
@@ -94,6 +96,12 @@ class QuestionViewController: UIViewController {
         remainingQuestionOfNumber.text = String(15 - QuestionDataManage.nowQuestionIndex)
         countdownBarFloat = 1.00
         countdownBar.progress = 1
+    }
+    
+    private func setupBanner() {
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     private func labelAndButtonResize() {

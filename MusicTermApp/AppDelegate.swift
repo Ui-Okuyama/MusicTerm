@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import RealmSwift
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,7 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         Realm.Configuration.defaultConfiguration = config
         _ = try! Realm()
+        
+        // Use Firebase library to configure APIs.
         FirebaseApp.configure()
+        
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
 

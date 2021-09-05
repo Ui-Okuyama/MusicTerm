@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Firebase
+import GoogleMobileAds
 
 class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var difficultyButton4: UIButton!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var levelBar: UIProgressView!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     @IBAction func tappedDifficultyButton1(_ sender: Any) {
         presentToCountdownView(quizdata: "quizdataEasy")
@@ -41,6 +43,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHomeViews()
+        setupBanner()
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedProfileView(_:)))
         self.profileView.addGestureRecognizer(tapGesture)
@@ -65,6 +68,12 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         buttonLayout(button: difficultyButton2)
         buttonLayout(button: difficultyButton3)
         buttonLayout(button: difficultyButton4)
+    }
+    
+    private func setupBanner() {
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     private func buttonLayout(button: UIButton) {

@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,11 +142,20 @@
                                     <constraint firstAttribute="width" secondItem="RY6-0U-a4O" secondAttribute="height" multiplier="4:5" id="yOI-RF-ETA"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riK-yS-Qlq" customClass="GADBannerView">
+                                <rect key="frame" x="12.5" y="617" width="350" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hx3-HW-Dk9"/>
+                                    <constraint firstAttribute="width" constant="350" id="OJq-iR-akc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" cyan="0.77944839584243886" magenta="0.44" yellow="0.33000000000000002" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
                             <constraint firstItem="OA1-S1-rjc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5Pn-rI-dAc"/>
+                            <constraint firstItem="riK-yS-Qlq" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="95i-KO-Spb"/>
                             <constraint firstItem="gIF-P9-3qq" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.06" id="BG9-Ki-tZK"/>
                             <constraint firstItem="LPq-Af-6d5" firstAttribute="leading" secondItem="lea-Hx-HcC" secondAttribute="leading" id="CHT-wF-wJc"/>
                             <constraint firstItem="tM3-Yz-3UW" firstAttribute="bottom" secondItem="ROP-2L-0bS" secondAttribute="bottom" multiplier="0.95" id="CQt-gW-nOq"/>
@@ -163,6 +173,7 @@
                             <constraint firstItem="tM3-Yz-3UW" firstAttribute="leading" secondItem="ROP-2L-0bS" secondAttribute="trailing" constant="3" id="ha3-sI-TiM"/>
                             <constraint firstItem="RY6-0U-a4O" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.64" id="kCY-zG-l2N"/>
                             <constraint firstItem="RY6-0U-a4O" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="mOs-zc-go1"/>
+                            <constraint firstItem="riK-yS-Qlq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="oB3-B0-kJA"/>
                             <constraint firstItem="RY6-0U-a4O" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="q7E-RC-iVJ"/>
                             <constraint firstItem="tM3-Yz-3UW" firstAttribute="trailing" secondItem="LPq-Af-6d5" secondAttribute="trailing" id="q8N-pJ-q4k"/>
                             <constraint firstItem="OA1-S1-rjc" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.770667" id="uN5-42-rzU"/>
@@ -178,6 +189,7 @@
                         <outlet property="answerLabel" destination="dSY-lg-Rq6" id="97R-4A-RDg"/>
                         <outlet property="answerView" destination="RY6-0U-a4O" id="YZ9-BC-d6Y"/>
                         <outlet property="backHomeButton" destination="lea-Hx-HcC" id="w8F-o4-gWG"/>
+                        <outlet property="bannerView" destination="riK-yS-Qlq" id="UmW-fw-sOT"/>
                         <outlet property="correctOrFalseLabel" destination="zt1-sb-jOK" id="s0o-KL-cdf"/>
                         <outlet property="countdownBar" destination="Bx2-d1-8sA" id="UGK-Od-ivc"/>
                         <outlet property="marubatsuImage" destination="Ssb-ne-gzJ" id="YOq-rG-K1S"/>
@@ -193,5 +205,8 @@
     </scenes>
     <resources>
         <image name="maru" width="800" height="600"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

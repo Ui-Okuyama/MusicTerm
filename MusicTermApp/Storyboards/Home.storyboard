@@ -140,15 +140,25 @@
                                     <constraint firstItem="5c9-qZ-Kcl" firstAttribute="height" secondItem="mRw-Ik-YR4" secondAttribute="height" multiplier="0.9" id="xlU-ka-3tH"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbF-z0-EyT" customClass="GADBannerView">
+                                <rect key="frame" x="12.5" y="617" width="350" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8ve-89-50W"/>
+                                    <constraint firstAttribute="width" constant="350" id="Cor-l9-uj6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" cyan="0.77546830610795459" magenta="0.44300340772508739" yellow="0.3356607077005026" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
+                            <constraint firstItem="SbF-z0-EyT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0de-Nw-BOi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HJU-XL-SoD" secondAttribute="bottom" constant="100" id="4V9-Sf-jmF"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AEg-FS-3mV"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.185" id="FkC-SH-dHl"/>
                             <constraint firstItem="PWj-gs-w5d" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="G0v-Qm-8Cc"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="G9l-dY-sxv"/>
+                            <constraint firstAttribute="bottom" secondItem="SbF-z0-EyT" secondAttribute="bottom" id="KpA-gP-UP2"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="LM8-8a-OQP"/>
                             <constraint firstItem="nPi-ts-lJI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="UFg-f8-08Y"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="erf-Vj-KlT"/>
@@ -161,6 +171,7 @@
                     <navigationItem key="navigationItem" id="wRQ-bD-y3d"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="bannerView" destination="SbF-z0-EyT" id="2Ov-WJ-exh"/>
                         <outlet property="bestScoreLabel" destination="soI-Qz-zXV" id="bbQ-Qz-Cdv"/>
                         <outlet property="difficultyButton1" destination="nPi-ts-lJI" id="T0V-95-oOm"/>
                         <outlet property="difficultyButton2" destination="abm-Cl-MSS" id="Ywg-Fj-1zx"/>
