@@ -31,6 +31,9 @@
 		6A9A22CE26E1311400CBD801 /* QuestionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22CD26E1311400CBD801 /* QuestionHistory.swift */; };
 		6A9A22D026E3673D00CBD801 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22CF26E3673B00CBD801 /* Result.storyboard */; };
 		6A9A22D226E3677000CBD801 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22D126E3677000CBD801 /* ResultViewController.swift */; };
+		6AE6A40926E50A8700A36EE8 /* TermOfListViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE6A40826E50A8700A36EE8 /* TermOfListViewControllers.swift */; };
+		6AE6A40B26E50B2600A36EE8 /* TermOfList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE6A40A26E50B2600A36EE8 /* TermOfList.storyboard */; };
+		6AE6A41126E543DD00A36EE8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE6A41026E543DD00A36EE8 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		6A9A22CD26E1311400CBD801 /* QuestionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHistory.swift; sourceTree = "<group>"; };
 		6A9A22CF26E3673B00CBD801 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		6A9A22D126E3677000CBD801 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		6AE6A40826E50A8700A36EE8 /* TermOfListViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermOfListViewControllers.swift; sourceTree = "<group>"; };
+		6AE6A40A26E50B2600A36EE8 /* TermOfList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermOfList.storyboard; sourceTree = "<group>"; };
+		6AE6A41026E543DD00A36EE8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		7B7E24B1CD873C948D14C1CB /* Pods_MusicTermApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTermApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,6 +151,7 @@
 				6A9A22BD26DB7F7000CBD801 /* Countdown.storyboard */,
 				6A9A22C326DBC48B00CBD801 /* Question.storyboard */,
 				6A9A22CF26E3673B00CBD801 /* Result.storyboard */,
+				6AE6A40A26E50B2600A36EE8 /* TermOfList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 				6A9A22BF26DB7F9D00CBD801 /* CountdownViewController.swift */,
 				6A9A22C526DBC4C300CBD801 /* QuestionViewController.swift */,
 				6A9A22D126E3677000CBD801 /* ResultViewController.swift */,
+				6AE6A40826E50A8700A36EE8 /* TermOfListViewControllers.swift */,
+				6AE6A41026E543DD00A36EE8 /* CustomCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 				6A9A22D026E3673D00CBD801 /* Result.storyboard in Resources */,
 				6A9A22C826DD1CD700CBD801 /* quizdataEasy.csv in Resources */,
 				6A9A229226D19E8200CBD801 /* Main.storyboard in Resources */,
+				6AE6A40B26E50B2600A36EE8 /* TermOfList.storyboard in Resources */,
 				6A9A22AB26D23E6B00CBD801 /* Home.storyboard in Resources */,
 				6A9A22AD26D3713600CBD801 /* Assets.xcassets in Resources */,
 			);
@@ -300,7 +310,9 @@
 				6A9A228B26D19E8200CBD801 /* AppDelegate.swift in Sources */,
 				6A9A228D26D19E8200CBD801 /* SceneDelegate.swift in Sources */,
 				6A9A22A726D2387000CBD801 /* User.swift in Sources */,
+				6AE6A40926E50A8700A36EE8 /* TermOfListViewControllers.swift in Sources */,
 				6A9A22A226D207D900CBD801 /* UIColorExtensionRGB.swift in Sources */,
+				6AE6A41126E543DD00A36EE8 /* CustomCell.swift in Sources */,
 				6A9A22A926D23E4900CBD801 /* HomeViewController.swift in Sources */,
 				6A9A22CE26E1311400CBD801 /* QuestionHistory.swift in Sources */,
 				6A9A22C026DB7F9D00CBD801 /* CountdownViewController.swift in Sources */,

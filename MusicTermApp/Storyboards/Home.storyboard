@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HJU-XL-SoD">
-                                <rect key="frame" x="37.5" y="233.5" width="300" height="333.5"/>
+                                <rect key="frame" x="37.5" y="173.5" width="300" height="333.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPi-ts-lJI">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="46.5"/>
@@ -33,7 +33,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abm-Cl-MSS">
-                                        <rect key="frame" x="0.0" y="95.5" width="300" height="47"/>
+                                        <rect key="frame" x="0.0" y="95.5" width="300" height="46.5"/>
                                         <color key="backgroundColor" red="0.45499596228966344" green="0.71431268011773386" blue="0.38465198436817089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
                                         <state key="normal" title="上級">
@@ -55,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-cC-u0Z">
-                                        <rect key="frame" x="0.0" y="287" width="300" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="286.5" width="300" height="47"/>
                                         <color key="backgroundColor" red="0.8653910176737325" green="0.43380555906495849" blue="0.31753988199300698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
                                         <state key="normal" title="世界級">
@@ -70,7 +70,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-FV-NcU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="123.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mozart" translatesAutoresizingMaskIntoConstraints="NO" id="mRw-Ik-YR4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mozart" translatesAutoresizingMaskIntoConstraints="NO" id="mRw-Ik-YR4">
                                         <rect key="frame" x="10" y="22.5" width="79" height="78.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mRw-Ik-YR4" secondAttribute="height" multiplier="1:1" id="kFA-Xb-5Mw"/>
@@ -148,12 +148,25 @@
                                     <constraint firstAttribute="width" constant="350" id="Cor-l9-uj6"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygs-c4-INp">
+                                <rect key="frame" x="148" y="546" width="79" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ygs-c4-INp" secondAttribute="height" multiplier="79:36" id="zXR-AG-vRd"/>
+                                </constraints>
+                                <state key="normal" title="用語一覧">
+                                    <color key="titleColor" cyan="0.8767957354" magenta="0.72419525360000003" yellow="0.49253375710000002" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedToListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CJc-Tl-bwH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" cyan="0.77546830610795459" magenta="0.44300340772508739" yellow="0.3356607077005026" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
                             <constraint firstItem="SbF-z0-EyT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0de-Nw-BOi"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HJU-XL-SoD" secondAttribute="bottom" constant="100" id="4V9-Sf-jmF"/>
+                            <constraint firstItem="ygs-c4-INp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3Kq-Xp-SeI"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AEg-FS-3mV"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.185" id="FkC-SH-dHl"/>
                             <constraint firstItem="PWj-gs-w5d" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="G0v-Qm-8Cc"/>
@@ -161,8 +174,11 @@
                             <constraint firstAttribute="bottom" secondItem="SbF-z0-EyT" secondAttribute="bottom" id="KpA-gP-UP2"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="LM8-8a-OQP"/>
                             <constraint firstItem="nPi-ts-lJI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="UFg-f8-08Y"/>
+                            <constraint firstItem="SbF-z0-EyT" firstAttribute="top" secondItem="ygs-c4-INp" secondAttribute="bottom" constant="35" id="ajp-Zm-F44"/>
+                            <constraint firstItem="ygs-c4-INp" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.210667" id="bN7-Pt-uU6"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="erf-Vj-KlT"/>
                             <constraint firstItem="abm-Cl-MSS" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="ft5-Vk-sey"/>
+                            <constraint firstItem="HJU-XL-SoD" firstAttribute="top" secondItem="d9g-FV-NcU" secondAttribute="bottom" constant="50" id="nwZ-mm-Ypi"/>
                             <constraint firstItem="FWr-cC-u0Z" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="pYe-GT-V3s"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="peu-X5-nC7"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yP9-x5-jej"/>
@@ -182,6 +198,7 @@
                         <outlet property="levelLabel" destination="xyl-HH-Mvr" id="2sK-Ul-1hb"/>
                         <outlet property="profileImage" destination="mRw-Ik-YR4" id="veA-qk-nWM"/>
                         <outlet property="profileView" destination="d9g-FV-NcU" id="s82-aj-fmd"/>
+                        <outlet property="toListOfTermButton" destination="ygs-c4-INp" id="SfO-wd-Bv6"/>
                         <outlet property="totalScoreLabel" destination="1b5-lg-MSF" id="AEi-yq-SqP"/>
                         <outlet property="userName" destination="geZ-8e-DcX" id="wxh-Ms-h3J"/>
                     </connections>
@@ -210,7 +227,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mozart" width="267" height="349.5"/>
+        <image name="Mozart" width="267" height="349.5"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -12,7 +12,7 @@ class QuestionHistory: Object {
     
     static let realm = try! Realm()
     
-    @objc dynamic private var id = 0
+    @objc dynamic var id = 0
     @objc dynamic var createdAt = NSDate(timeIntervalSince1970: 0)
     @objc dynamic var musicTerm = ""
     @objc dynamic var correctOrFalse = false

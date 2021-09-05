@@ -25,6 +25,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var difficultyButton4: UIButton!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var levelBar: UIProgressView!
+    @IBOutlet weak var toListOfTermButton: UIButton!
     @IBOutlet weak var bannerView: GADBannerView!
     
     @IBAction func tappedDifficultyButton1(_ sender: Any) {
@@ -38,6 +39,9 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     @IBAction func tappedDifficultyButton4(_ sender: Any) {
         presentToCountdownView(quizdata: "quizdataLunatic")
+    }
+    @IBAction func tappedToListButton(_ sender: Any) {
+        presentToListOfTermViewController()
     }
     
     override func viewDidLoad() {
@@ -124,8 +128,13 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     private func presentToCountdownView(quizdata: String) {
             let storyBoard = UIStoryboard(name: "Countdown", bundle: nil)
             let countdownViewController = storyBoard.instantiateViewController(identifier: "CountdownViewController") as! CountdownViewController
-        countdownViewController.quizdata = quizdata
+            countdownViewController.quizdata = quizdata
             navigationController?.pushViewController(countdownViewController, animated: true)
     }
     
+    private func presentToListOfTermViewController() {
+        let storyboard = UIStoryboard(name: "TermOfList", bundle: nil)
+        let termOfListViewController = storyboard.instantiateViewController(identifier: "TermOfListViewController") as! TermOfListViewController
+        navigationController?.pushViewController(termOfListViewController, animated: true)
+    }
 }

@@ -32,6 +32,7 @@ class CountdownViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         countLabel.font = countLabel.font.withSize(self.view.bounds.height / 12)
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,7 +62,6 @@ class CountdownViewController: UIViewController {
         questionViewController.questionData = questionData
         questionViewController.quizdata = quizdata
         print(questionData!.question)
-        questionViewController.modalPresentationStyle = .fullScreen
-        present(questionViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(questionViewController, animated: false)
     }
 }

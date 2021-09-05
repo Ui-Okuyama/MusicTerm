@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import RealmSwift
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var settingButton: UIButton!
     
     @IBAction func TappedSettingButton(_ sender: Any) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        let test = realm.objects(QuestionHistory.self)
+        print(test)
     }
     
     @IBAction func touchdownStartButton(_ sender: Any) {
@@ -85,7 +92,7 @@ class ViewController: UIViewController {
     }
     
     private func addNewUserInfoToFirebase(userRef: DocumentReference) {
-        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "currentImage": "mozart", "images": ["mozart", "J.S.Bach", "beethoven", "Debussy", "Tchaikovsky", "chopin"]] as [String : Any]
+        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "currentImage": "Mozart", "images": ["Mozart", "J.S.Bach", "Beethoven", "Debussy", "Tchaikovsky", "Chopin"]] as [String : Any]
         userRef.setData(newData){(err) in
             if let err = err {
                 print("Firestoreへの保存に失敗しました。\(err)")

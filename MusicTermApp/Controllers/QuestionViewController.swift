@@ -21,7 +21,7 @@ class QuestionViewController: UIViewController {
     var solvedtime: Double!
     var timeStartingToSolve: Date!
     var timeFinisedToSolve: Date!
-    var score: Int = 0
+    var score: Double = 0
     var totalScore: Int = 0
     
     @IBOutlet weak var QuestionLabel: UILabel!
@@ -60,13 +60,17 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupBanner()
     }
     
     override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        navigationController?.navigationBar.isHidden = true
         labelAndButtonResize()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setTimer()
     }
     
@@ -143,10 +147,7 @@ class QuestionViewController: UIViewController {
     }
     
     private func presentToHomeViewController() {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
-        homeViewController.modalPresentationStyle = .fullScreen
-        present(homeViewController, animated: true, completion: nil)
+        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
     
     private func afterTappedAnswerButton() {
@@ -164,13 +165,11 @@ class QuestionViewController: UIViewController {
             print("false")
             correctOrFalseLabel.text = " 不正解!"
             marubatsuImage.image = UIImage(named: "batsu")
-            score = 0
-            totalScore += score
         }
         answerView.alpha = 1
         saveToRealm()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.judgeGoingNextQuestionOrScore()
+            self.judgeGoingNextQuestionOrScoreView()
         }
     }
     
@@ -179,33 +178,41 @@ class QuestionViewController: UIViewController {
         
         switch quizdata {
         case "quizdataEasy":
-            score = 10
+            score = 250
         case "quizdataNormal":
-            score = 12
+            score = 500
         case "quizdataHard":
-            score = 14
+            score = 1000
         case "quizdataLunatic":
-            score = 16
+            score = 2000
         default:
             break
         }
-        score += Int(solvedtime * 2)
-        totalScore += score
+        totalScore += Int(score * solvedtime)
         print(score,totalScore,Int(solvedtime))
     }
     
     private func saveToRealm() {
+        let allData = realm.objects(QuestionHistory.self)
         let questionHistory = QuestionHistory()
+        questionHistory.id = allData.count + 1
+        print(allData.count)
         questionHistory.createdAt = NSDate()
         questionHistory.musicTerm = questionData!.question
         questionHistory.correctOrFalse = questionData!.isCorrect()
         questionHistory.musicTermMeaning = questionData!.answer1
-        print(questionHistory)
+        do {
+            try realm.write{
+                realm.add(questionHistory)
+            }
+        } catch {
+            print("err:\(error)")
+        }
     }
     
-    private func judgeGoingNextQuestionOrScore() {
-        if QuestionDataManage.nowQuestionIndex == 14 {
-            presentToHomeViewController()
+    private func judgeGoingNextQuestionOrScoreView() {
+        if QuestionDataManage.nowQuestionIndex == 15 {
+            presentToScoreViewController()
         } else {
             GoNextQuestion()
         }
@@ -227,7 +234,12 @@ class QuestionViewController: UIViewController {
     }
     
     private func presentToScoreViewController() {
-        
+        let storyboards = UIStoryboard(name: "Result", bundle: nil)
+        let resultViewController = storyboards.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
+        resultViewController.modalPresentationStyle = .fullScreen
+        resultViewController.score = totalScore
+        print(totalScore)
+        navigationController?.pushViewController(resultViewController, animated: true)
     }
     
     private func allAnswerButtonDisabled() {
