@@ -52,6 +52,7 @@ class CountdownViewController: UIViewController {
     }
     
     private func getQuestionData() {
+        QuestionDataManage.nowQuestionIndex = 0
         QuestionDataManage.shared.loadQuestion(quizdata: quizdata!)
         questionData = QuestionDataManage.shared.nextQuestion()
     }

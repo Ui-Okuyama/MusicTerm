@@ -32,7 +32,7 @@ class ResultViewController: UIViewController {
         presentToHomeViewController()
     }
     @IBAction func tappedListOfTerm(_ sender: Any) {
-        presentToListOfTermViewController()
+        presentToListViewController()
     }
     
     override func viewDidLoad() {
@@ -49,6 +49,11 @@ class ResultViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         labelAndButtonResize()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        updateFirestoreData()
     }
     
     func setup() {
@@ -116,9 +121,9 @@ class ResultViewController: UIViewController {
         navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
     
-    private func presentToListOfTermViewController() {
-        let storyboard = UIStoryboard(name: "TermOfList", bundle: nil)
-        let termOfListViewController = storyboard.instantiateViewController(identifier: "TermOfListViewController") as! TermOfListViewController
-        navigationController?.pushViewController(termOfListViewController, animated: true)
+    private func presentToListViewController() {
+        let storyboard = UIStoryboard(name: "List", bundle: nil)
+        let listViewController = storyboard.instantiateViewController(identifier: "ListViewController") as! ListViewController
+        navigationController?.pushViewController(listViewController, animated: true)
     }
 }

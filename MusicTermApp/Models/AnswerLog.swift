@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class QuestionHistory: Object {
+class AnswerLog: Object {
     
     static let realm = try! Realm()
     

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         try! realm.write {
             realm.deleteAll()
         }
-        let test = realm.objects(QuestionHistory.self)
+        let test = realm.objects(AnswerLog.self)
         print(test)
     }
     

@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,25 +148,44 @@
                                     <constraint firstAttribute="width" constant="350" id="Cor-l9-uj6"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygs-c4-INp">
-                                <rect key="frame" x="148" y="546" width="79" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ygs-c4-INp" secondAttribute="height" multiplier="79:36" id="zXR-AG-vRd"/>
-                                </constraints>
-                                <state key="normal" title="用語一覧">
-                                    <color key="titleColor" cyan="0.8767957354" magenta="0.72419525360000003" yellow="0.49253375710000002" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedToListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CJc-Tl-bwH"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zxD-dR-0nG">
+                                <rect key="frame" x="86.5" y="547" width="202.5" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-95-T0t">
+                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="31"/>
+                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cnq-95-T0t" secondAttribute="height" multiplier="3:1" id="x9b-LV-Uge"/>
+                                        </constraints>
+                                        <state key="normal" title="ランキング">
+                                            <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedToRankingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zl4-ed-8Lc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygs-c4-INp">
+                                        <rect key="frame" x="108.5" y="0.0" width="94" height="31"/>
+                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ygs-c4-INp" secondAttribute="height" multiplier="3:1" id="gVu-Sl-JgS"/>
+                                        </constraints>
+                                        <state key="normal" title="用語一覧">
+                                            <color key="titleColor" cyan="0.8767957354" magenta="0.72419525360000003" yellow="0.49253375710000002" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedToListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CJc-Tl-bwH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" cyan="0.77546830610795459" magenta="0.44300340772508739" yellow="0.3356607077005026" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
                             <constraint firstItem="SbF-z0-EyT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0de-Nw-BOi"/>
-                            <constraint firstItem="ygs-c4-INp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3Kq-Xp-SeI"/>
+                            <constraint firstItem="zxD-dR-0nG" firstAttribute="top" secondItem="HJU-XL-SoD" secondAttribute="bottom" constant="40" id="3gr-9I-rcK"/>
+                            <constraint firstItem="zxD-dR-0nG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7s7-av-a92"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AEg-FS-3mV"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.185" id="FkC-SH-dHl"/>
                             <constraint firstItem="PWj-gs-w5d" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="G0v-Qm-8Cc"/>
@@ -174,8 +193,7 @@
                             <constraint firstAttribute="bottom" secondItem="SbF-z0-EyT" secondAttribute="bottom" id="KpA-gP-UP2"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="LM8-8a-OQP"/>
                             <constraint firstItem="nPi-ts-lJI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="UFg-f8-08Y"/>
-                            <constraint firstItem="SbF-z0-EyT" firstAttribute="top" secondItem="ygs-c4-INp" secondAttribute="bottom" constant="35" id="ajp-Zm-F44"/>
-                            <constraint firstItem="ygs-c4-INp" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.210667" id="bN7-Pt-uU6"/>
+                            <constraint firstItem="ygs-c4-INp" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="X56-Of-rzL"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="erf-Vj-KlT"/>
                             <constraint firstItem="abm-Cl-MSS" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="ft5-Vk-sey"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="top" secondItem="d9g-FV-NcU" secondAttribute="bottom" constant="50" id="nwZ-mm-Ypi"/>
@@ -199,6 +217,7 @@
                         <outlet property="profileImage" destination="mRw-Ik-YR4" id="veA-qk-nWM"/>
                         <outlet property="profileView" destination="d9g-FV-NcU" id="s82-aj-fmd"/>
                         <outlet property="toListOfTermButton" destination="ygs-c4-INp" id="SfO-wd-Bv6"/>
+                        <outlet property="toRankingViewButton" destination="cnq-95-T0t" id="dWQ-Uf-pzv"/>
                         <outlet property="totalScoreLabel" destination="1b5-lg-MSF" id="AEi-yq-SqP"/>
                         <outlet property="userName" destination="geZ-8e-DcX" id="wxh-Ms-h3J"/>
                     </connections>
@@ -210,6 +229,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3qR-cA-XCf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwb-Xy-BTx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l0E-kf-cBG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mhA-7I-cEe">
@@ -221,7 +241,6 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="y8z-KX-08b"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwb-Xy-BTx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="17.39130434782609" y="50.892857142857139"/>
         </scene>

@@ -42,6 +42,7 @@ class QuestionDataManage {
             return
         }
         questionDataArray.removeAll()
+        oneGameQuestionsArray.removeAll()
 
         do {
             let csvStringData = try String(contentsOfFile: csvfilePath, encoding: String.Encoding.utf8)

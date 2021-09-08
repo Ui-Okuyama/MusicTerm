@@ -22,7 +22,6 @@ class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UI
     }
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
-        
     }
     
     override func viewDidLayoutSubviews() {

@@ -193,17 +193,17 @@ class QuestionViewController: UIViewController {
     }
     
     private func saveToRealm() {
-        let allData = realm.objects(QuestionHistory.self)
-        let questionHistory = QuestionHistory()
-        questionHistory.id = allData.count + 1
+        let allData = realm.objects(AnswerLog.self)
+        let answerLog = AnswerLog()
+        answerLog.id = allData.count + 1
         print(allData.count)
-        questionHistory.createdAt = NSDate()
-        questionHistory.musicTerm = questionData!.question
-        questionHistory.correctOrFalse = questionData!.isCorrect()
-        questionHistory.musicTermMeaning = questionData!.answer1
+        answerLog.createdAt = NSDate()
+        answerLog.musicTerm = questionData!.question
+        answerLog.correctOrFalse = questionData!.isCorrect()
+        answerLog.musicTermMeaning = questionData!.answer1
         do {
             try realm.write{
-                realm.add(questionHistory)
+                realm.add(answerLog)
             }
         } catch {
             print("err:\(error)")

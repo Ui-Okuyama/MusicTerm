@@ -26,6 +26,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var levelBar: UIProgressView!
     @IBOutlet weak var toListOfTermButton: UIButton!
+    @IBOutlet weak var toRankingViewButton: UIButton!
     @IBOutlet weak var bannerView: GADBannerView!
     
     @IBAction func tappedDifficultyButton1(_ sender: Any) {
@@ -41,7 +42,10 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         presentToCountdownView(quizdata: "quizdataLunatic")
     }
     @IBAction func tappedToListButton(_ sender: Any) {
-        presentToListOfTermViewController()
+        presentToListViewController()
+    }
+    @IBAction func tappedToRankingButton(_ sender: Any) {
+        presentToRankingViewController()
     }
     
     override func viewDidLoad() {
@@ -132,9 +136,16 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             navigationController?.pushViewController(countdownViewController, animated: true)
     }
     
-    private func presentToListOfTermViewController() {
-        let storyboard = UIStoryboard(name: "TermOfList", bundle: nil)
-        let termOfListViewController = storyboard.instantiateViewController(identifier: "TermOfListViewController") as! TermOfListViewController
-        navigationController?.pushViewController(termOfListViewController, animated: true)
+    private func presentToListViewController() {
+        let storyboard = UIStoryboard(name: "List", bundle: nil)
+        let listViewController = storyboard.instantiateViewController(identifier: "ListViewController") as! ListViewController
+        navigationController?.pushViewController(listViewController, animated: true)
+    }
+    
+    private func presentToRankingViewController() {
+        let storyboard = UIStoryboard(name: "Ranking", bundle: nil)
+        let rankingViewController = storyboard.instantiateViewController(identifier: "RankingViewController") as! RankingViewController
+        rankingViewController.modalPresentationStyle = .fullScreen
+        present(rankingViewController, animated: true, completion: nil)
     }
 }
