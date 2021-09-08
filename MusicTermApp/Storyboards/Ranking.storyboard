@@ -33,7 +33,7 @@
                                             <segment title="BestScore"/>
                                             <segment title="TotalScore"/>
                                         </segments>
-                                        <color key="selectedSegmentTintColor" red="0.86880514509999995" green="0.39581629610000002" blue="0.29054548359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="selectedSegmentTintColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="changeSegmentdConrol:" destination="Y6W-OH-hqX" eventType="valueChanged" id="RSQ-9B-DA2"/>
                                         </connections>

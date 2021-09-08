@@ -39,7 +39,7 @@
                                 <color key="textColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.30975982029999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beethoven" translatesAutoresizingMaskIntoConstraints="NO" id="8j2-NU-HfO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beethoven" translatesAutoresizingMaskIntoConstraints="NO" id="8j2-NU-HfO">
                                 <rect key="frame" x="122" y="92.5" width="131" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8j2-NU-HfO" secondAttribute="height" multiplier="1:1" id="xFE-Aa-ppQ"/>
@@ -151,9 +151,77 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="51.724137931034484"/>
         </scene>
+        <!--Level Up View Controller-->
+        <scene sceneID="BSb-a1-tme">
+            <objects>
+                <viewController storyboardIdentifier="LevelUpViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="27Q-mw-FjZ" customClass="LevelUpViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lck-Aa-enf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xga-wk-XqE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-yG-KxZ">
+                                <rect key="frame" x="56.5" y="176.5" width="262.5" height="314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SN5-gj-3Py">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="314"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jhy-MA-QL1">
+                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="267"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-8l-UBZ">
+                                                <rect key="frame" x="0.0" y="267" width="262.5" height="47"/>
+                                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <state key="normal" title="閉じる">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedCloseButton:" destination="27Q-mw-FjZ" eventType="touchUpInside" id="kI0-YV-1sp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SN5-gj-3Py" secondAttribute="bottom" id="0Hy-aW-bZL"/>
+                                    <constraint firstAttribute="trailing" secondItem="SN5-gj-3Py" secondAttribute="trailing" id="Ecz-Rj-ckF"/>
+                                    <constraint firstItem="rEc-8l-UBZ" firstAttribute="height" secondItem="EhR-yG-KxZ" secondAttribute="height" multiplier="0.15" id="OOC-E1-eK6"/>
+                                    <constraint firstItem="SN5-gj-3Py" firstAttribute="top" secondItem="EhR-yG-KxZ" secondAttribute="top" id="VFc-3B-Wt9"/>
+                                    <constraint firstItem="SN5-gj-3Py" firstAttribute="leading" secondItem="EhR-yG-KxZ" secondAttribute="leading" id="eEK-kz-EoP"/>
+                                    <constraint firstAttribute="width" secondItem="EhR-yG-KxZ" secondAttribute="height" multiplier="143:171" id="zQJ-53-5DZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MKs-g6-GW4"/>
+                        <constraints>
+                            <constraint firstItem="EhR-yG-KxZ" firstAttribute="centerY" secondItem="lck-Aa-enf" secondAttribute="centerY" id="2ID-zG-9ew"/>
+                            <constraint firstItem="xga-wk-XqE" firstAttribute="width" secondItem="lck-Aa-enf" secondAttribute="width" id="BJf-ES-0SP"/>
+                            <constraint firstItem="EhR-yG-KxZ" firstAttribute="width" secondItem="lck-Aa-enf" secondAttribute="width" multiplier="0.7" id="COL-8H-AnR"/>
+                            <constraint firstItem="EhR-yG-KxZ" firstAttribute="centerX" secondItem="lck-Aa-enf" secondAttribute="centerX" id="Chk-Nr-FOr"/>
+                            <constraint firstItem="xga-wk-XqE" firstAttribute="leading" secondItem="MKs-g6-GW4" secondAttribute="leading" id="VwR-m1-Mk0"/>
+                            <constraint firstItem="xga-wk-XqE" firstAttribute="top" secondItem="MKs-g6-GW4" secondAttribute="top" id="l5l-U2-xQg"/>
+                            <constraint firstItem="xga-wk-XqE" firstAttribute="height" secondItem="lck-Aa-enf" secondAttribute="height" id="vV1-Ge-XKC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="levelUpImageView" destination="Jhy-MA-QL1" id="dEw-hI-TjP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Qq-eY-y8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703.20000000000005" y="69.715142428785612"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="beethoven" width="172.5" height="200"/>
+        <image name="Beethoven" width="172.5" height="200"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

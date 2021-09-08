@@ -76,8 +76,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-IB-BHA">
                                 <rect key="frame" x="0.0" y="88" width="414" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="一覧"/>
+                                    <segment title="間違った単語"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
