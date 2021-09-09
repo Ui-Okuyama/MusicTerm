@@ -15,6 +15,8 @@ class ResultViewController: UIViewController {
     var score: Int?
     var user: User?
     var newTotalScore: Int?
+    var newLevelText: String?
+    let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
     
     @IBOutlet weak var viewTitleLabel: UILabel!
     @IBOutlet weak var composerImage: UIImageView!
@@ -46,6 +48,11 @@ class ResultViewController: UIViewController {
         fetchUserInfoFromFirebase()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        judgeLevelUp()
+    }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         labelAndButtonResize()
@@ -53,7 +60,7 @@ class ResultViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        updateFirestoreData()
+        updateTotalScoreFirestoreData()
     }
     
     func setup() {
@@ -66,6 +73,7 @@ class ResultViewController: UIViewController {
     func setupWithUserdata() {
         if score! > (user?.bestScore)! {
             bestscoreLabel.text = "ベストスコア: \(score!)"
+            updateBestScoreFirestoreData()
         } else {
             bestscoreLabel.text = "ベストスコア: \((user?.bestScore)!)"
         }
@@ -106,13 +114,35 @@ class ResultViewController: UIViewController {
         }
     }
     
-    private func updateFirestoreData() {
-        let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
+    private func judgeLevelUp() {
+        let level = Level.init(level: user!.level)
+        if level.jugdeNextLevel(totalScore: newTotalScore!) {
+            newLevelText = level.nextLevelName()
+            presentToLevelUpViewController()
+            updateLevelFirestoreData()
+        }
+    }
+    
+    private func updateLevelFirestoreData() {
+        userRef.updateData(["level" : newLevelText!]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            }
+        }
+    }
+    
+    private func updateTotalScoreFirestoreData() {
         userRef.updateData(["totalScore" : newTotalScore!]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
-            } else {
-                print("Document successfully updated")
+            }
+        }
+    }
+    
+    private func updateBestScoreFirestoreData() {
+        userRef.updateData(["bestScore" : score!]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
             }
         }
     }
@@ -125,5 +155,22 @@ class ResultViewController: UIViewController {
         let storyboard = UIStoryboard(name: "List", bundle: nil)
         let listViewController = storyboard.instantiateViewController(identifier: "ListViewController") as! ListViewController
         navigationController?.pushViewController(listViewController, animated: true)
+    }
+    
+    private func presentToLevelUpViewController() {
+        let levelUpViewController = storyboard?.instantiateViewController(identifier: "LevelUpViewController") as! LevelUpViewController
+        levelUpViewController.presentationController?.delegate = self
+        present(levelUpViewController, animated: true, completion: nil)
+    }
+    
+    private func presentToGetImageViewController() {
+        let getImageViewController = storyboard?.instantiateViewController(identifier: "GetImageViewController") as! GetImageViewController
+        present(getImageViewController, animated: true, completion: nil)
+    }
+}
+
+extension ResultViewController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        presentToGetImageViewController()
     }
 }

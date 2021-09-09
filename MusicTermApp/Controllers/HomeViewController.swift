@@ -143,9 +143,8 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func presentToRankingViewController() {
-        let storyboard = UIStoryboard(name: "Ranking", bundle: nil)
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let rankingViewController = storyboard.instantiateViewController(identifier: "RankingViewController") as! RankingViewController
-        rankingViewController.modalPresentationStyle = .fullScreen
         present(rankingViewController, animated: true, completion: nil)
     }
 }

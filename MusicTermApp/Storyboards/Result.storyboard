@@ -169,7 +169,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SN5-gj-3Py">
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="314"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jhy-MA-QL1">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="?" translatesAutoresizingMaskIntoConstraints="NO" id="Jhy-MA-QL1">
                                                 <rect key="frame" x="0.0" y="0.0" width="262.5" height="267"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-8l-UBZ">
@@ -216,9 +216,76 @@
             </objects>
             <point key="canvasLocation" x="703.20000000000005" y="69.715142428785612"/>
         </scene>
+        <!--Get Image View Controller-->
+        <scene sceneID="5Db-SK-QiU">
+            <objects>
+                <viewController storyboardIdentifier="GetImageViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3cN-Jx-U74" customClass="GetImageViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Xz-Hp-J6U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXm-ww-f24">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMH-7E-QSs">
+                                <rect key="frame" x="56.5" y="176.5" width="262.5" height="314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bG4-W9-fX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="314"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tchaikovsky" translatesAutoresizingMaskIntoConstraints="NO" id="Rld-IU-RS2">
+                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="267"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC4-c5-7Ve">
+                                                <rect key="frame" x="0.0" y="267" width="262.5" height="47"/>
+                                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <state key="normal" title="閉じる">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedCloseButton:" destination="3cN-Jx-U74" eventType="touchUpInside" id="65H-5Z-IKY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="uC4-c5-7Ve" firstAttribute="height" secondItem="GMH-7E-QSs" secondAttribute="height" multiplier="0.15" id="1RB-CS-Uko"/>
+                                    <constraint firstItem="bG4-W9-fX5" firstAttribute="leading" secondItem="GMH-7E-QSs" secondAttribute="leading" id="Bg4-Tp-7ow"/>
+                                    <constraint firstAttribute="width" secondItem="GMH-7E-QSs" secondAttribute="height" multiplier="143:171" id="FZe-c7-FUK"/>
+                                    <constraint firstAttribute="trailing" secondItem="bG4-W9-fX5" secondAttribute="trailing" id="MsQ-Pg-5St"/>
+                                    <constraint firstItem="bG4-W9-fX5" firstAttribute="top" secondItem="GMH-7E-QSs" secondAttribute="top" id="gfd-Rm-UHE"/>
+                                    <constraint firstAttribute="bottom" secondItem="bG4-W9-fX5" secondAttribute="bottom" id="niS-p2-Gj3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gud-Ty-zoY"/>
+                        <constraints>
+                            <constraint firstItem="GMH-7E-QSs" firstAttribute="centerX" secondItem="8Xz-Hp-J6U" secondAttribute="centerX" id="0uM-Cf-I3g"/>
+                            <constraint firstItem="GMH-7E-QSs" firstAttribute="centerY" secondItem="8Xz-Hp-J6U" secondAttribute="centerY" id="8cX-MV-LKj"/>
+                            <constraint firstItem="XXm-ww-f24" firstAttribute="top" secondItem="gud-Ty-zoY" secondAttribute="top" id="DR7-aQ-L5k"/>
+                            <constraint firstItem="XXm-ww-f24" firstAttribute="width" secondItem="8Xz-Hp-J6U" secondAttribute="width" id="OpQ-9N-ALK"/>
+                            <constraint firstItem="XXm-ww-f24" firstAttribute="height" secondItem="8Xz-Hp-J6U" secondAttribute="height" id="feo-Cx-64F"/>
+                            <constraint firstItem="GMH-7E-QSs" firstAttribute="width" secondItem="8Xz-Hp-J6U" secondAttribute="width" multiplier="0.7" id="jzV-5M-YY2"/>
+                            <constraint firstItem="XXm-ww-f24" firstAttribute="leading" secondItem="gud-Ty-zoY" secondAttribute="leading" id="rqi-5P-PSN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getImageView" destination="Rld-IU-RS2" id="Oah-bV-uhZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGK-3O-wZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="70"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="?" width="78.5" height="100"/>
         <image name="Beethoven" width="172.5" height="200"/>
+        <image name="Tchaikovsky" width="163.5" height="200"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
