@@ -10,12 +10,34 @@ import UIKit
 
 class LevelUpViewController: UIViewController {
     
+    var level:Level?
+    var tapCount = 0
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var levelUpImageView: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     @IBAction func tappedCloseButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        tapCount += 1
+        tappedButton()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup() {
+        titleLabel.text = "Lv." + String(level!.currentLevel + 1)
+    }
+    
+    private func tappedButton() {
+        if tapCount == 1 {
+            levelUpImageView.image = UIImage(named: level!.getImage)
+            titleLabel.text = "新しいサムネイルを取得しました！"
+            closeButton.setTitle("閉じる", for: .normal)
+            
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
 

@@ -11,7 +11,6 @@
 		6A36813D26E89A070060A3A0 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36813C26E89A070060A3A0 /* RankingViewController.swift */; };
 		6A36814126E8AAE80060A3A0 /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */; };
 		6A36814326E926200060A3A0 /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814226E926200060A3A0 /* LevelUpViewController.swift */; };
-		6A36814526E9FB6F0060A3A0 /* GetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814426E9FB6F0060A3A0 /* GetImageViewController.swift */; };
 		6A36814926EA061D0060A3A0 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814826EA061D0060A3A0 /* Level.swift */; };
 		6A9A228B26D19E8200CBD801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228A26D19E8200CBD801 /* AppDelegate.swift */; };
 		6A9A228D26D19E8200CBD801 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */; };
@@ -47,7 +46,6 @@
 		6A36813C26E89A070060A3A0 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		6A36814226E926200060A3A0 /* LevelUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
-		6A36814426E9FB6F0060A3A0 /* GetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageViewController.swift; sourceTree = "<group>"; };
 		6A36814826EA061D0060A3A0 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		6A9A228726D19E8200CBD801 /* MusicTermApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTermApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9A228A26D19E8200CBD801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				6A36813C26E89A070060A3A0 /* RankingViewController.swift */,
 				6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */,
 				6A36814226E926200060A3A0 /* LevelUpViewController.swift */,
-				6A36814426E9FB6F0060A3A0 /* GetImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 				6A36814126E8AAE80060A3A0 /* RankingTableViewCell.swift in Sources */,
 				6A9A228D26D19E8200CBD801 /* SceneDelegate.swift in Sources */,
 				6A9A22A726D2387000CBD801 /* User.swift in Sources */,
-				6A36814526E9FB6F0060A3A0 /* GetImageViewController.swift in Sources */,
 				6AE6A40926E50A8700A36EE8 /* ListViewControllers.swift in Sources */,
 				6A9A22A226D207D900CBD801 /* UIColorExtensionRGB.swift in Sources */,
 				6A36814326E926200060A3A0 /* LevelUpViewController.swift in Sources */,

@@ -14,6 +14,7 @@ class ResultViewController: UIViewController {
     
     var score: Int?
     var user: User?
+    var level: Level?
     var newTotalScore: Int?
     var newLevelText: String?
     let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
@@ -45,12 +46,14 @@ class ResultViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchUserInfoFromFirebase()
+        fetchUserInfoFromFirebase { (user) in
+            self.setupWithUserdata()
+            self.judgeLevelUp()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        judgeLevelUp()
     }
     
     override func viewWillLayoutSubviews() {
@@ -102,7 +105,7 @@ class ResultViewController: UIViewController {
         bannerView.load(GADRequest())
     }
     
-    private func fetchUserInfoFromFirebase() {
+    private func fetchUserInfoFromFirebase(comletion: @escaping (User) -> Void) {
         let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.getDocument { [self] (document, err) in
             if let err = err {
@@ -110,14 +113,14 @@ class ResultViewController: UIViewController {
             }
             guard let data = document!.data() else { return }
             self.user = User.init(dic: data)
-            setupWithUserdata()
+            comletion(self.user!)
         }
     }
     
     private func judgeLevelUp() {
-        let level = Level.init(level: user!.level)
-        if level.jugdeNextLevel(totalScore: newTotalScore!) {
-            newLevelText = level.nextLevelName()
+        level = Level.init(level: user!.level)
+        if level!.jugdeNextLevel(totalScore: newTotalScore!) {
+            newLevelText = level!.nextLevelName()
             presentToLevelUpViewController()
             updateLevelFirestoreData()
         }
@@ -160,17 +163,15 @@ class ResultViewController: UIViewController {
     private func presentToLevelUpViewController() {
         let levelUpViewController = storyboard?.instantiateViewController(identifier: "LevelUpViewController") as! LevelUpViewController
         levelUpViewController.presentationController?.delegate = self
+        levelUpViewController.level = level
         present(levelUpViewController, animated: true, completion: nil)
-    }
-    
-    private func presentToGetImageViewController() {
-        let getImageViewController = storyboard?.instantiateViewController(identifier: "GetImageViewController") as! GetImageViewController
-        present(getImageViewController, animated: true, completion: nil)
     }
 }
 
 extension ResultViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        presentToGetImageViewController()
+        fetchUserInfoFromFirebase { user in
+            self.judgeLevelUp()
+        }
     }
 }
