@@ -73,7 +73,7 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="oJB-Lt-wdJ"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-IB-BHA">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-IB-BHA">
                                 <rect key="frame" x="0.0" y="88" width="414" height="32"/>
                                 <segments>
                                     <segment title="一覧"/>
@@ -91,6 +91,7 @@
                             <constraint firstItem="tfV-IB-BHA" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="1TS-eQ-xA1"/>
                             <constraint firstItem="tfV-IB-BHA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="9ve-yP-zvr"/>
                             <constraint firstItem="8Tb-u8-RwP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ADD-sP-eJk"/>
+                            <constraint firstItem="tfV-IB-BHA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JxS-ba-y6u"/>
                             <constraint firstItem="8Tb-u8-RwP" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="eL5-LX-1Lh"/>
                             <constraint firstItem="8Tb-u8-RwP" firstAttribute="top" secondItem="tfV-IB-BHA" secondAttribute="bottom" id="t6B-oz-Nx8"/>
                         </constraints>

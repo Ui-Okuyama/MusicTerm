@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import RealmSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var user: User?
     @IBOutlet weak var startButton: UIButton!
@@ -25,13 +25,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchdownStartButton(_ sender: Any) {
-        startButton.backgroundColor = UIColor.rgb(red: 200, green: 108, blue: 0, alpha: 1)
+        changeColorButton()
     }
     @IBAction func tappedStartButton(_ sender: Any) {
-        startButton.backgroundColor = UIColor.rgb(red: 255, green: 149, blue: 0, alpha: 1)
         presentToHomeViewController()
-        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -46,12 +45,9 @@ class ViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        let fontsize = Int(startButton.frame.size.height / 2.3)
-        startButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
     }
 
     private func setupViews() {
-        startButton.layer.cornerRadius = 30
         let icon = UIImage(systemName: "gearshape.fill")
         settingButton.setImage(icon, for: .normal)
     }
@@ -61,6 +57,12 @@ class ViewController: UIViewController {
         let homeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
         homeViewController.user = user
         navigationController?.pushViewController(homeViewController, animated: true)
+    }
+    
+    private func changeColorButton() {
+        let backImage = UIImage(named: "startButton")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        startButton.setImage(backImage, for: .normal)
+        startButton.tintColor = UIColor.rgb(red: 188, green: 87, blue: 0, alpha: 0.5)
     }
     
     private func signInFirebaseAnonymouslyUser() {

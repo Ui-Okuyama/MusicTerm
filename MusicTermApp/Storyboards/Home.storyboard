@@ -9,6 +9,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="UmiYamaLogoGothic-R.otf">
+            <string>UmiYamaLogoGothic-R</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -24,7 +29,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPi-ts-lJI">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="46.5"/>
                                         <color key="backgroundColor" red="0.35294117647058826" green="0.75987787846918708" blue="0.86982076151387677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="22"/>
                                         <state key="normal" title="音大入試レベル">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -128,7 +133,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" cyan="0.9235708596823099" magenta="0.79101263726507864" yellow="0.33420653443236453" black="0.32218059671336208" alpha="0.51646018514827807" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <color key="backgroundColor" cyan="1" magenta="0.75693890764996719" yellow="0.56469811926354896" black="0.32218059671336208" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="5c9-qZ-Kcl" firstAttribute="leading" secondItem="mRw-Ik-YR4" secondAttribute="trailing" id="EL6-4Z-ll3"/>
@@ -179,6 +184,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-dZ-33A">
+                                <rect key="frame" x="-66" y="0.0" width="507" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GQQ-dZ-33A" secondAttribute="height" multiplier="313:412" id="xiE-0Q-KiE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" cyan="0.77546830610795459" magenta="0.44300340772508739" yellow="0.3356607077005026" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -187,6 +198,7 @@
                             <constraint firstItem="zxD-dR-0nG" firstAttribute="top" secondItem="HJU-XL-SoD" secondAttribute="bottom" constant="40" id="3gr-9I-rcK"/>
                             <constraint firstItem="zxD-dR-0nG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7s7-av-a92"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AEg-FS-3mV"/>
+                            <constraint firstItem="GQQ-dZ-33A" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" id="FNY-Yd-7Iu"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.185" id="FkC-SH-dHl"/>
                             <constraint firstItem="PWj-gs-w5d" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="G0v-Qm-8Cc"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="G9l-dY-sxv"/>
@@ -195,16 +207,19 @@
                             <constraint firstItem="nPi-ts-lJI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="UFg-f8-08Y"/>
                             <constraint firstItem="ygs-c4-INp" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="X56-Of-rzL"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="erf-Vj-KlT"/>
+                            <constraint firstItem="GQQ-dZ-33A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ffT-EH-jyQ"/>
                             <constraint firstItem="abm-Cl-MSS" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="ft5-Vk-sey"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="top" secondItem="d9g-FV-NcU" secondAttribute="bottom" constant="50" id="nwZ-mm-Ypi"/>
                             <constraint firstItem="FWr-cC-u0Z" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="pYe-GT-V3s"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="peu-X5-nC7"/>
+                            <constraint firstItem="GQQ-dZ-33A" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="uZp-sm-GLP"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yP9-x5-jej"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wRQ-bD-y3d"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="GQQ-dZ-33A" id="qIF-pP-w4k"/>
                         <outlet property="bannerView" destination="SbF-z0-EyT" id="2Ov-WJ-exh"/>
                         <outlet property="bestScoreLabel" destination="soI-Qz-zXV" id="bbQ-Qz-Cdv"/>
                         <outlet property="difficultyButton1" destination="nPi-ts-lJI" id="T0V-95-oOm"/>
@@ -374,6 +389,7 @@
     </scenes>
     <resources>
         <image name="Mozart" width="267" height="349.5"/>
+        <image name="背景" width="679" height="901"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

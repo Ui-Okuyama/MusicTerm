@@ -12,6 +12,8 @@
 		6A36814126E8AAE80060A3A0 /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */; };
 		6A36814326E926200060A3A0 /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814226E926200060A3A0 /* LevelUpViewController.swift */; };
 		6A36814926EA061D0060A3A0 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814826EA061D0060A3A0 /* Level.swift */; };
+		6A36815026ECDC9E0060A3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A36814F26ECDC9E0060A3A0 /* Assets.xcassets */; };
+		6A36815226ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36815126ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf */; };
 		6A9A228B26D19E8200CBD801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228A26D19E8200CBD801 /* AppDelegate.swift */; };
 		6A9A228D26D19E8200CBD801 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */; };
 		6A9A228F26D19E8200CBD801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228E26D19E8200CBD801 /* ViewController.swift */; };
@@ -22,7 +24,6 @@
 		6A9A22A726D2387000CBD801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22A626D2387000CBD801 /* User.swift */; };
 		6A9A22A926D23E4900CBD801 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22A826D23E4900CBD801 /* HomeViewController.swift */; };
 		6A9A22AB26D23E6B00CBD801 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22AA26D23E6B00CBD801 /* Home.storyboard */; };
-		6A9A22AD26D3713600CBD801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22AC26D3713600CBD801 /* Assets.xcassets */; };
 		6A9A22B026D3D0E900CBD801 /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A22AF26D3D0E800CBD801 /* ProfileEdit.storyboard */; };
 		6A9A22B226D3D10900CBD801 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22B126D3D10900CBD801 /* ProfileEditController.swift */; };
 		6A9A22B626D7FA7300CBD801 /* ModalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A22B526D7FA7300CBD801 /* ModalProfileViewController.swift */; };
@@ -47,6 +48,8 @@
 		6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		6A36814226E926200060A3A0 /* LevelUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
 		6A36814826EA061D0060A3A0 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		6A36814F26ECDC9E0060A3A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A36815126ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UmiYamaLogoGothic-R.otf"; sourceTree = "<group>"; };
 		6A9A228726D19E8200CBD801 /* MusicTermApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTermApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9A228A26D19E8200CBD801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		6A9A22A626D2387000CBD801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6A9A22A826D23E4900CBD801 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6A9A22AA26D23E6B00CBD801 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		6A9A22AC26D3713600CBD801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A9A22AF26D3D0E800CBD801 /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
 		6A9A22B126D3D10900CBD801 /* ProfileEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		6A9A22B526D7FA7300CBD801 /* ModalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +137,8 @@
 				6A9A228A26D19E8200CBD801 /* AppDelegate.swift */,
 				6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */,
 				6A9A229526D19E8500CBD801 /* LaunchScreen.storyboard */,
-				6A9A22AC26D3713600CBD801 /* Assets.xcassets */,
+				6A36814F26ECDC9E0060A3A0 /* Assets.xcassets */,
+				6A36815126ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf */,
 				6A9A229E26D19F6800CBD801 /* GoogleService-Info.plist */,
 				6A9A229826D19E8500CBD801 /* Info.plist */,
 			);
@@ -256,6 +259,8 @@
 			files = (
 				6A9A229726D19E8500CBD801 /* LaunchScreen.storyboard in Resources */,
 				6A9A22BE26DB7F7100CBD801 /* Countdown.storyboard in Resources */,
+				6A36815026ECDC9E0060A3A0 /* Assets.xcassets in Resources */,
+				6A36815226ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf in Resources */,
 				6A9A22C426DBC48B00CBD801 /* Question.storyboard in Resources */,
 				6A9A229F26D19F6800CBD801 /* GoogleService-Info.plist in Resources */,
 				6A9A22B026D3D0E900CBD801 /* ProfileEdit.storyboard in Resources */,
@@ -264,7 +269,6 @@
 				6A9A229226D19E8200CBD801 /* Main.storyboard in Resources */,
 				6AE6A40B26E50B2600A36EE8 /* List.storyboard in Resources */,
 				6A9A22AB26D23E6B00CBD801 /* Home.storyboard in Resources */,
-				6A9A22AD26D3713600CBD801 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

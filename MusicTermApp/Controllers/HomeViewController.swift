@@ -13,6 +13,7 @@ import GoogleMobileAds
 class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var user: User?
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -72,6 +73,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func setupHomeViews() {
         self.view.sendSubviewToBack(profileView)
+        self.view.sendSubviewToBack(backgroundImageView)
         buttonLayout(button: difficultyButton1)
         buttonLayout(button: difficultyButton2)
         buttonLayout(button: difficultyButton3)

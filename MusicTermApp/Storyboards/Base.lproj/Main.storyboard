@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gS9-4U-1S3">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,16 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPH-Sm-h0x">
-                                <rect key="frame" x="205" y="1066.5" width="614" height="109.5"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="26.5"/>
-                                <state key="normal" title="はじめる">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPH-Sm-h0x">
+                                <rect key="frame" x="94" y="440" width="187.5" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wPH-Sm-h0x" secondAttribute="height" multiplier="459:139" id="ttO-aU-pay"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="startButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -29,21 +31,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58q-UX-unD">
-                                <rect key="frame" x="954" y="1266" width="30" height="30"/>
+                                <rect key="frame" x="305" y="587" width="30" height="30"/>
                                 <connections>
                                     <action selector="TappedSettingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5O-NF-9fe"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MusicTerm　タイトルロゴ" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-8P-8io">
+                                <rect key="frame" x="47" y="155.5" width="281" height="154.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H3m-8P-8io" secondAttribute="height" multiplier="353:194" id="FU0-eb-KBj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wPH-Sm-h0x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5bl-r3-UdZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="58q-UX-unD" secondAttribute="bottom" constant="50" id="84L-qe-wd2"/>
-                            <constraint firstItem="wPH-Sm-h0x" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="Cmn-g7-Wk9"/>
-                            <constraint firstItem="wPH-Sm-h0x" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="Ree-9p-v6K"/>
+                            <constraint firstItem="wPH-Sm-h0x" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Mf6-8l-d0R"/>
+                            <constraint firstItem="H3m-8P-8io" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XXu-1R-ScL"/>
+                            <constraint firstItem="H3m-8P-8io" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="izW-bL-mSx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="58q-UX-unD" secondAttribute="trailing" constant="40" id="mTc-tn-xgb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wPH-Sm-h0x" secondAttribute="bottom" constant="170" id="nqY-Kg-smv"/>
+                            <constraint firstItem="wPH-Sm-h0x" firstAttribute="top" secondItem="H3m-8P-8io" secondAttribute="bottom" constant="130" id="uBl-fM-4Dx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vju-Eh-cJc"/>
@@ -54,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
+            <point key="canvasLocation" x="928.79999999999995" y="75.112443778110944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yK8-lv-Njh">
@@ -62,7 +72,7 @@
                 <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gS9-4U-1S3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BT0-uq-7t8">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -76,11 +86,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MusicTerm　タイトルロゴ" width="556" height="308"/>
+        <image name="startButton" width="918" height="278"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
