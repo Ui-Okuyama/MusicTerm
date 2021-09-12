@@ -12,8 +12,10 @@
 		6A36814126E8AAE80060A3A0 /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */; };
 		6A36814326E926200060A3A0 /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814226E926200060A3A0 /* LevelUpViewController.swift */; };
 		6A36814926EA061D0060A3A0 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814826EA061D0060A3A0 /* Level.swift */; };
-		6A36815026ECDC9E0060A3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A36814F26ECDC9E0060A3A0 /* Assets.xcassets */; };
 		6A36815226ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36815126ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf */; };
+		6A36815926ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36815826ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf */; };
+		6A36816026ED37110060A3A0 /* YasashisaGothicBold-V2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36815F26ED37100060A3A0 /* YasashisaGothicBold-V2.otf */; };
+		6A36816226EDCF5D0060A3A0 /* Assets.xcassets 15-01-46-623.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A36816126EDCF5C0060A3A0 /* Assets.xcassets 15-01-46-623.xcassets */; };
 		6A9A228B26D19E8200CBD801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228A26D19E8200CBD801 /* AppDelegate.swift */; };
 		6A9A228D26D19E8200CBD801 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */; };
 		6A9A228F26D19E8200CBD801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228E26D19E8200CBD801 /* ViewController.swift */; };
@@ -48,8 +50,10 @@
 		6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		6A36814226E926200060A3A0 /* LevelUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
 		6A36814826EA061D0060A3A0 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
-		6A36814F26ECDC9E0060A3A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A36815126ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UmiYamaLogoGothic-R.otf"; sourceTree = "<group>"; };
+		6A36815826ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JK-Maru-Gothic-M.otf"; sourceTree = "<group>"; };
+		6A36815F26ED37100060A3A0 /* YasashisaGothicBold-V2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YasashisaGothicBold-V2.otf"; sourceTree = "<group>"; };
+		6A36816126EDCF5C0060A3A0 /* Assets.xcassets 15-01-46-623.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets 15-01-46-623.xcassets"; sourceTree = "<group>"; };
 		6A9A228726D19E8200CBD801 /* MusicTermApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTermApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9A228A26D19E8200CBD801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6A36815C26ED31B70060A3A0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6A36815826ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf */,
+				6A36815126ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf */,
+				6A36815F26ED37100060A3A0 /* YasashisaGothicBold-V2.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		6A9A227E26D19E8200CBD801 = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +151,10 @@
 				6A9A228A26D19E8200CBD801 /* AppDelegate.swift */,
 				6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */,
 				6A9A229526D19E8500CBD801 /* LaunchScreen.storyboard */,
-				6A36814F26ECDC9E0060A3A0 /* Assets.xcassets */,
-				6A36815126ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf */,
-				6A9A229E26D19F6800CBD801 /* GoogleService-Info.plist */,
+				6A36815C26ED31B70060A3A0 /* Font */,
 				6A9A229826D19E8500CBD801 /* Info.plist */,
+				6A9A229E26D19F6800CBD801 /* GoogleService-Info.plist */,
+				6A36816126EDCF5C0060A3A0 /* Assets.xcassets 15-01-46-623.xcassets */,
 			);
 			path = MusicTermApp;
 			sourceTree = "<group>";
@@ -258,8 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A9A229726D19E8500CBD801 /* LaunchScreen.storyboard in Resources */,
+				6A36816026ED37110060A3A0 /* YasashisaGothicBold-V2.otf in Resources */,
 				6A9A22BE26DB7F7100CBD801 /* Countdown.storyboard in Resources */,
-				6A36815026ECDC9E0060A3A0 /* Assets.xcassets in Resources */,
 				6A36815226ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf in Resources */,
 				6A9A22C426DBC48B00CBD801 /* Question.storyboard in Resources */,
 				6A9A229F26D19F6800CBD801 /* GoogleService-Info.plist in Resources */,
@@ -267,6 +281,8 @@
 				6A9A22D026E3673D00CBD801 /* Result.storyboard in Resources */,
 				6A9A22C826DD1CD700CBD801 /* quizdataEasy.csv in Resources */,
 				6A9A229226D19E8200CBD801 /* Main.storyboard in Resources */,
+				6A36815926ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf in Resources */,
+				6A36816226EDCF5D0060A3A0 /* Assets.xcassets 15-01-46-623.xcassets in Resources */,
 				6AE6A40B26E50B2600A36EE8 /* List.storyboard in Resources */,
 				6A9A22AB26D23E6B00CBD801 /* Home.storyboard in Resources */,
 			);

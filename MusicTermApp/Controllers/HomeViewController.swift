@@ -75,9 +75,13 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         self.view.sendSubviewToBack(profileView)
         self.view.sendSubviewToBack(backgroundImageView)
         buttonLayout(button: difficultyButton1)
+        difficultyButton1.layer.borderColor = CGColor.rgb(red: 90, green: 194, blue: 222, alpha: 1)
         buttonLayout(button: difficultyButton2)
+        difficultyButton2.layer.borderColor = CGColor.rgb(red: 116, green: 182, blue: 98, alpha: 1)
         buttonLayout(button: difficultyButton3)
+        difficultyButton3.layer.borderColor = CGColor.rgb(red: 212, green: 122, blue: 189, alpha: 1)
         buttonLayout(button: difficultyButton4)
+        difficultyButton4.layer.borderColor = CGColor.rgb(red: 221, green: 111, blue: 81, alpha: 1)
     }
     
     private func setupBanner() {
@@ -88,6 +92,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func buttonLayout(button: UIButton) {
         button.layer.cornerRadius = 20
+        button.layer.borderWidth = 7
         button.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
@@ -124,12 +129,11 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         bestScoreLabel.font = bestScoreLabel.font.withSize(vHeight / 60)
         totalScoreLabel.font = totalScoreLabel.font.withSize(vHeight / 60)
         level.font = level.font.withSize(vHeight / 60)
-        let fontsize = Int(difficultyButton1.frame.size.height) / 2
-        difficultyButton1.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
-        difficultyButton2.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
-        difficultyButton3.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
-        difficultyButton4.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
-    }
+        let fontsize = Int(difficultyButton1.frame.size.height / 2.5 )
+        difficultyButton1.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
+        difficultyButton2.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
+        difficultyButton3.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
+        difficultyButton4.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))    }
     
     private func presentToCountdownView(quizdata: String) {
             let storyBoard = UIStoryboard(name: "Countdown", bundle: nil)

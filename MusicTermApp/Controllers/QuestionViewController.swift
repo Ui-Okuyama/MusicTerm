@@ -120,7 +120,6 @@ class QuestionViewController: UIViewController {
         answerButton3.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
         let backfontsize = Int(answerButton1.frame.size.height / 2.5)
         backHomeButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(backfontsize))
-        correctOrFalseLabel.font = QuestionLabel.font.withSize( vHeight / 22 )
         answerLabel.font = answerLabel.font.withSize( vHeight / 35 )
     }
     
@@ -158,12 +157,10 @@ class QuestionViewController: UIViewController {
         answerLabel.text = "答え：" + questionData!.answer1
         if questionData!.isCorrect() {
             print("correct")
-            correctOrFalseLabel.text = " 正解!"
             marubatsuImage.image = UIImage(named: "maru")
             culcurateScore()
         } else {
             print("false")
-            correctOrFalseLabel.text = " 不正解!"
             marubatsuImage.image = UIImage(named: "batsu")
         }
         answerView.alpha = 1

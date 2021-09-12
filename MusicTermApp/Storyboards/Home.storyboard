@@ -10,8 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="JK-Maru-Gothic-M.otf">
+            <string>JK-Maru-Gothic-M</string>
+        </array>
         <array key="UmiYamaLogoGothic-R.otf">
             <string>UmiYamaLogoGothic-R</string>
+        </array>
+        <array key="YasashisaGothicBold-V2.otf">
+            <string>YasashisaGothicBoldV2-bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -23,48 +29,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-dZ-33A">
+                                <rect key="frame" x="-66" y="0.0" width="507" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GQQ-dZ-33A" secondAttribute="height" multiplier="313:412" id="xiE-0Q-KiE"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HJU-XL-SoD">
                                 <rect key="frame" x="37.5" y="173.5" width="300" height="333.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPi-ts-lJI">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="46.5"/>
-                                        <color key="backgroundColor" red="0.35294117647058826" green="0.75987787846918708" blue="0.86982076151387677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="53.5"/>
+                                        <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="26"/>
                                         <state key="normal" title="音大入試レベル">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="tappedDifficultyButton1:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QC8-YL-wWl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abm-Cl-MSS">
-                                        <rect key="frame" x="0.0" y="95.5" width="300" height="46.5"/>
-                                        <color key="backgroundColor" red="0.45499596228966344" green="0.71431268011773386" blue="0.38465198436817089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
-                                        <state key="normal" title="上級">
-                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="300" height="53"/>
+                                        <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="26"/>
+                                        <state key="normal" title="頻出楽語レベル">
+                                            <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="tappedDifficultyButton2:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Eg-uJ-A2l"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWj-gs-w5d">
-                                        <rect key="frame" x="0.0" y="191" width="300" height="47"/>
-                                        <color key="backgroundColor" red="0.83256071930998687" green="0.47869008737844188" blue="0.73975740446077365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
-                                        <state key="normal" title="超上級">
-                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="186.5" width="300" height="53.5"/>
+                                        <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="26"/>
+                                        <state key="normal" title="プロの音楽家レベル">
+                                            <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="tappedDifficultyButton3:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="q5q-e5-77r"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-cC-u0Z">
-                                        <rect key="frame" x="0.0" y="286.5" width="300" height="47"/>
-                                        <color key="backgroundColor" red="0.8653910176737325" green="0.43380555906495849" blue="0.31753988199300698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
-                                        <state key="normal" title="世界級">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="280" width="300" height="53.5"/>
+                                        <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="26"/>
+                                        <state key="normal" title="楽語博士レベル">
+                                            <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="tappedDifficultyButton4:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v2Z-3D-SqC"/>
@@ -85,46 +97,46 @@
                                         <rect key="frame" x="89" y="26.5" width="200" height="70.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-8e-DcX">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="22"/>
-                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="21"/>
+                                                <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="T2h-jL-v9Q">
-                                                <rect key="frame" x="0.0" y="27" width="95.5" height="19"/>
+                                                <rect key="frame" x="0.0" y="26" width="93.5" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-HH-Mvr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="19"/>
-                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="21"/>
+                                                        <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-sW-Ffx">
-                                                        <rect key="frame" x="58.5" y="4.5" width="37" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <rect key="frame" x="54.5" y="5.5" width="39" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="13"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qkD-0a-gW4">
-                                                <rect key="frame" x="0.0" y="51" width="200" height="3.5"/>
+                                                <rect key="frame" x="0.0" y="52" width="200" height="3.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="progressTintColor" name="AccentColor"/>
                                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="43A-ci-q0T">
-                                                <rect key="frame" x="0.0" y="59.5" width="168.5" height="11"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="43A-ci-q0T">
+                                                <rect key="frame" x="0.0" y="60.5" width="168" height="10"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="総スコア：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="1b5-lg-MSF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="11"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="10"/>
+                                                        <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベストスコア：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="soI-Qz-zXV">
-                                                        <rect key="frame" x="75" y="0.0" width="93.5" height="11"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <rect key="frame" x="77" y="0.0" width="91" height="10"/>
+                                                        <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -162,6 +174,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cnq-95-T0t" secondAttribute="height" multiplier="3:1" id="x9b-LV-Uge"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="15"/>
                                         <state key="normal" title="ランキング">
                                             <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
@@ -175,8 +188,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ygs-c4-INp" secondAttribute="height" multiplier="3:1" id="gVu-Sl-JgS"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="15"/>
                                         <state key="normal" title="用語一覧">
-                                            <color key="titleColor" cyan="0.8767957354" magenta="0.72419525360000003" yellow="0.49253375710000002" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                            <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="tappedToListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CJc-Tl-bwH"/>
@@ -184,12 +198,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-dZ-33A">
-                                <rect key="frame" x="-66" y="0.0" width="507" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GQQ-dZ-33A" secondAttribute="height" multiplier="313:412" id="xiE-0Q-KiE"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" cyan="0.77546830610795459" magenta="0.44300340772508739" yellow="0.3356607077005026" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -200,17 +208,17 @@
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AEg-FS-3mV"/>
                             <constraint firstItem="GQQ-dZ-33A" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" id="FNY-Yd-7Iu"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.185" id="FkC-SH-dHl"/>
-                            <constraint firstItem="PWj-gs-w5d" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="G0v-Qm-8Cc"/>
+                            <constraint firstItem="PWj-gs-w5d" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.08" id="G0v-Qm-8Cc"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="G9l-dY-sxv"/>
                             <constraint firstAttribute="bottom" secondItem="SbF-z0-EyT" secondAttribute="bottom" id="KpA-gP-UP2"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="LM8-8a-OQP"/>
-                            <constraint firstItem="nPi-ts-lJI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="UFg-f8-08Y"/>
+                            <constraint firstItem="nPi-ts-lJI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.08" id="UFg-f8-08Y"/>
                             <constraint firstItem="ygs-c4-INp" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="X56-Of-rzL"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="erf-Vj-KlT"/>
                             <constraint firstItem="GQQ-dZ-33A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ffT-EH-jyQ"/>
-                            <constraint firstItem="abm-Cl-MSS" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="ft5-Vk-sey"/>
+                            <constraint firstItem="abm-Cl-MSS" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.08" id="ft5-Vk-sey"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="top" secondItem="d9g-FV-NcU" secondAttribute="bottom" constant="50" id="nwZ-mm-Ypi"/>
-                            <constraint firstItem="FWr-cC-u0Z" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="pYe-GT-V3s"/>
+                            <constraint firstItem="FWr-cC-u0Z" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.08" id="pYe-GT-V3s"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="peu-X5-nC7"/>
                             <constraint firstItem="GQQ-dZ-33A" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="uZp-sm-GLP"/>
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yP9-x5-jej"/>
@@ -316,14 +324,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gj9-mD-Gy8">
-                                                            <rect key="frame" x="103" y="7.5" width="87" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="103" y="9.5" width="85" height="17"/>
+                                                            <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="103444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bv-6b-6cN">
-                                                            <rect key="frame" x="103" y="31.5" width="60" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="103444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2bv-6b-6cN">
+                                                            <rect key="frame" x="103" y="33.5" width="65" height="17"/>
+                                                            <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
