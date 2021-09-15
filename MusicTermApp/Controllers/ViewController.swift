@@ -50,6 +50,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     private func setupViews() {
         let icon = UIImage(systemName: "gearshape.fill")
         settingButton.setImage(icon, for: .normal)
+        startButton.layer.cornerRadius = 15
     }
     
     private func presentToHomeViewController() {
@@ -60,9 +61,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func changeColorButton() {
-        let backImage = UIImage(named: "startButton")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        startButton.setImage(backImage, for: .normal)
-        startButton.tintColor = UIColor.rgb(red: 188, green: 87, blue: 0, alpha: 0.5)
+        startButton.backgroundColor = UIColor.rgb(red: 161, green: 101, blue: 74, alpha: 1)
     }
     
     private func signInFirebaseAnonymouslyUser() {

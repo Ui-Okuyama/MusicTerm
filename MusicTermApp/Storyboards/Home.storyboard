@@ -96,7 +96,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5c9-qZ-Kcl">
                                         <rect key="frame" x="89" y="26.5" width="200" height="70.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-8e-DcX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-8e-DcX">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="21"/>
                                                 <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,7 +105,7 @@
                                             <stackView opaque="NO" contentMode="scaleAspectFill" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="T2h-jL-v9Q">
                                                 <rect key="frame" x="0.0" y="26" width="93.5" height="21"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-HH-Mvr">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-HH-Mvr">
                                                         <rect key="frame" x="0.0" y="0.0" width="51.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,7 +210,7 @@
                             <constraint firstItem="d9g-FV-NcU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.185" id="FkC-SH-dHl"/>
                             <constraint firstItem="PWj-gs-w5d" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.08" id="G0v-Qm-8Cc"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="G9l-dY-sxv"/>
-                            <constraint firstAttribute="bottom" secondItem="SbF-z0-EyT" secondAttribute="bottom" id="KpA-gP-UP2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SbF-z0-EyT" secondAttribute="bottom" id="KpA-gP-UP2"/>
                             <constraint firstItem="HJU-XL-SoD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="LM8-8a-OQP"/>
                             <constraint firstItem="nPi-ts-lJI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.08" id="UFg-f8-08Y"/>
                             <constraint firstItem="ygs-c4-INp" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="X56-Of-rzL"/>

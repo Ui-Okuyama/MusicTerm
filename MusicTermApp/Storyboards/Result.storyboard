@@ -7,6 +7,17 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="JK-Maru-Gothic-M.otf">
+            <string>JK-Maru-Gothic-M</string>
+        </array>
+        <array key="UmiYamaLogoGothic-R.otf">
+            <string>UmiYamaLogoGothic-R</string>
+        </array>
+        <array key="YasashisaGothicBold-V2.otf">
+            <string>YasashisaGothicBoldV2-bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Result View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -16,12 +27,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景白" translatesAutoresizingMaskIntoConstraints="NO" id="RlG-ay-Wvd">
+                                <rect key="frame" x="-62" y="0.0" width="499" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RlG-ay-Wvd" secondAttribute="height" multiplier="499:667" id="maZ-KK-T1T"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtk-hH-kem">
                                 <rect key="frame" x="46.5" y="203.5" width="282" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まだ目標には程遠いな。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWQ-fR-vKT">
-                                        <rect key="frame" x="45.5" y="33.5" width="191" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="43.5" y="35" width="195" height="18"/>
+                                        <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -34,8 +51,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果発表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3u-Tf-H90">
-                                <rect key="frame" x="143" y="34" width="89.5" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="127.5" y="32.5" width="120" height="30"/>
+                                <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="30"/>
                                 <color key="textColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.30975982029999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -46,29 +63,30 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12230" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-pd-xmQ">
-                                <rect key="frame" x="113" y="344.5" width="149" height="58"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="50"/>
+                                <rect key="frame" x="107.5" y="345.5" width="160" height="50"/>
+                                <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="50"/>
                                 <color key="textColor" red="0.86880514509999995" green="0.39581629610000002" blue="0.29054548359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 今回のスコア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnN-HE-Q9f">
-                                <rect key="frame" x="133" y="323.5" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今回のスコア" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnN-HE-Q9f">
+                                <rect key="frame" x="136.5" y="323.5" width="102" height="17"/>
+                                <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="17"/>
                                 <color key="textColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="総スコア: 1220493" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5p-hS-YBM">
-                                <rect key="frame" x="114" y="448.5" width="147" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="111" y="437.5" width="153" height="17"/>
+                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="17"/>
                                 <color key="textColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVw-qz-kUT">
-                                <rect key="frame" x="87.5" y="509.5" width="75" height="40"/>
+                                <rect key="frame" x="87.5" y="494.5" width="75" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HVw-qz-kUT" secondAttribute="height" multiplier="15:8" id="fTZ-Vb-3Gn"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="15"/>
                                 <state key="normal" title="ホームへ">
                                     <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
@@ -77,11 +95,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsL-tW-mNw">
-                                <rect key="frame" x="212.5" y="509.5" width="75" height="40"/>
+                                <rect key="frame" x="212.5" y="494.5" width="75" height="40"/>
                                 <color key="backgroundColor" red="0.40854041889999998" green="0.69854554930000001" blue="0.11939564950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AsL-tW-mNw" secondAttribute="height" multiplier="15:8" id="CG0-Tm-wTm"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="15"/>
                                 <state key="normal" title="用語一覧">
                                     <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
@@ -90,8 +109,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベストスコア: 13400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYs-X3-0ju">
-                                <rect key="frame" x="106.5" y="422.5" width="162" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="106" y="415.5" width="163" height="17"/>
+                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="17"/>
                                 <color key="textColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -111,8 +130,10 @@
                             <constraint firstItem="8j2-NU-HfO" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.196402" id="38p-II-FTO"/>
                             <constraint firstItem="aZg-pd-xmQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="96b-J4-zv5"/>
                             <constraint firstItem="X5p-hS-YBM" firstAttribute="top" secondItem="zYs-X3-0ju" secondAttribute="bottom" constant="5" id="BB1-Yf-Yjq"/>
+                            <constraint firstItem="RlG-ay-Wvd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Egx-6S-n7B"/>
                             <constraint firstItem="Ncs-Pr-MNd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FH6-go-00K"/>
-                            <constraint firstItem="aZg-pd-xmQ" firstAttribute="top" secondItem="rnN-HE-Q9f" secondAttribute="bottom" id="Kcl-lu-v0P"/>
+                            <constraint firstItem="aZg-pd-xmQ" firstAttribute="top" secondItem="rnN-HE-Q9f" secondAttribute="bottom" constant="5" id="Kcl-lu-v0P"/>
+                            <constraint firstItem="RlG-ay-Wvd" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" id="Lcx-Oh-fUl"/>
                             <constraint firstItem="HVw-qz-kUT" firstAttribute="top" secondItem="X5p-hS-YBM" secondAttribute="bottom" constant="40" id="LyO-62-Gof"/>
                             <constraint firstItem="8j2-NU-HfO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="MD7-lK-HZl"/>
                             <constraint firstItem="AsL-tW-mNw" firstAttribute="top" secondItem="X5p-hS-YBM" secondAttribute="bottom" constant="40" id="PPQ-HA-Mng"/>
@@ -131,6 +152,7 @@
                             <constraint firstItem="Dtk-hH-kem" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-90" id="uhp-bQ-MZm"/>
                             <constraint firstItem="K3u-Tf-H90" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="v5u-vG-0Eo"/>
                             <constraint firstItem="X5p-hS-YBM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wUC-h0-I28"/>
+                            <constraint firstItem="RlG-ay-Wvd" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="xd6-Pa-R04"/>
                         </constraints>
                     </view>
                     <connections>
@@ -164,24 +186,28 @@
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-yG-KxZ">
-                                <rect key="frame" x="56.5" y="176.5" width="262.5" height="314"/>
+                                <rect key="frame" x="56.5" y="155.5" width="262.5" height="356"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SN5-gj-3Py">
-                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="314"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="356"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="91e-MR-Bgy">
-                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="91e-MR-Bgy">
+                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="40"/>
+                                                <color key="backgroundColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="?" translatesAutoresizingMaskIntoConstraints="NO" id="Jhy-MA-QL1">
-                                                <rect key="frame" x="0.0" y="31.5" width="262.5" height="235.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LevelUp" translatesAutoresizingMaskIntoConstraints="NO" id="Jhy-MA-QL1">
+                                                <rect key="frame" x="0.0" y="40" width="262.5" height="262.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Jhy-MA-QL1" secondAttribute="height" multiplier="1:1" id="f87-Sj-flj"/>
+                                                </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-8l-UBZ">
-                                                <rect key="frame" x="0.0" y="267" width="262.5" height="47"/>
-                                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="302.5" width="262.5" height="53.5"/>
+                                                <color key="backgroundColor" red="1" green="0.704170707222465" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="25"/>
                                                 <state key="normal" title="次へ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -198,9 +224,8 @@
                                     <constraint firstAttribute="trailing" secondItem="SN5-gj-3Py" secondAttribute="trailing" id="Ecz-Rj-ckF"/>
                                     <constraint firstItem="rEc-8l-UBZ" firstAttribute="height" secondItem="EhR-yG-KxZ" secondAttribute="height" multiplier="0.15" id="OOC-E1-eK6"/>
                                     <constraint firstItem="SN5-gj-3Py" firstAttribute="top" secondItem="EhR-yG-KxZ" secondAttribute="top" id="VFc-3B-Wt9"/>
-                                    <constraint firstItem="91e-MR-Bgy" firstAttribute="height" secondItem="EhR-yG-KxZ" secondAttribute="height" multiplier="0.1" id="e1g-zU-BcU"/>
                                     <constraint firstItem="SN5-gj-3Py" firstAttribute="leading" secondItem="EhR-yG-KxZ" secondAttribute="leading" id="eEK-kz-EoP"/>
-                                    <constraint firstAttribute="width" secondItem="EhR-yG-KxZ" secondAttribute="height" multiplier="143:171" id="zQJ-53-5DZ"/>
+                                    <constraint firstAttribute="width" secondItem="EhR-yG-KxZ" secondAttribute="height" multiplier="126:171" id="zQJ-53-5DZ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -227,8 +252,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="?" width="78.5" height="100"/>
         <image name="Beethoven" width="172.5" height="200"/>
+        <image name="LevelUp" width="421" height="420"/>
+        <image name="背景白" width="624" height="845"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

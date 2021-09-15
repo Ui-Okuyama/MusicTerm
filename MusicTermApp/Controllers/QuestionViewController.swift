@@ -35,10 +35,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var monnLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
     
-    @IBOutlet weak var answerView: UIView!
-    @IBOutlet weak var correctOrFalseLabel: UILabel!
     @IBOutlet weak var marubatsuImage: UIImageView!
-    @IBOutlet weak var answerLabel: UILabel!
     @IBAction func tappedBackHomeButton(_ sender: Any) {
         presentToHomeViewController()
         resetTimer()
@@ -80,9 +77,6 @@ class QuestionViewController: UIViewController {
         answerButton2.layer.cornerRadius = 10
         answerButton3.layer.cornerRadius = 10
         backHomeButton.layer.cornerRadius = 15
-        answerView.layer.borderColor = CGColor.rgb(red: 66, green: 92, blue: 58, alpha: 1)
-        answerView.layer.borderWidth = 10
-        answerView.layer.cornerRadius = 20
     }
     
     private func setQuestionLayout() {
@@ -91,10 +85,13 @@ class QuestionViewController: UIViewController {
         choices = choices.shuffled()
         UIView.setAnimationsEnabled(false)
         answerButton1.setTitle(choices[0], for: .normal)
+        answerButton1.layer.borderWidth = 0
         answerButton1.layoutIfNeeded()
         answerButton2.setTitle(choices[1], for: .normal)
+        answerButton2.layer.borderWidth = 0
         answerButton2.layoutIfNeeded()
         answerButton3.setTitle(choices[2], for: .normal)
+        answerButton3.layer.borderWidth = 0
         answerButton3.layoutIfNeeded()
         UIView.setAnimationsEnabled(true)
         remainingQuestionOfNumber.text = String(15 - QuestionDataManage.nowQuestionIndex)
@@ -120,7 +117,6 @@ class QuestionViewController: UIViewController {
         answerButton3.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
         let backfontsize = Int(answerButton1.frame.size.height / 2.5)
         backHomeButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(backfontsize))
-        answerLabel.font = answerLabel.font.withSize( vHeight / 35 )
     }
     
     private func setTimer() {
@@ -154,19 +150,33 @@ class QuestionViewController: UIViewController {
         resetTimer()
         timeFinisedToSolve = Date()
         
-        answerLabel.text = "答え：" + questionData!.answer1
         if questionData!.isCorrect() {
             print("correct")
             marubatsuImage.image = UIImage(named: "maru")
+            marubatsuImage.tintColor = UIColor.rgb(red: 104, green: 178, blue: 30, alpha: 1)
             culcurateScore()
         } else {
             print("false")
             marubatsuImage.image = UIImage(named: "batsu")
+            marubatsuImage.tintColor = UIColor.rgb(red: 222, green: 101, blue: 74, alpha: 1)
         }
-        answerView.alpha = 1
         saveToRealm()
+        marubatsuImage.alpha = 0.7
+        changeColorAnswerButton(button: answerButton1)
+        changeColorAnswerButton(button: answerButton2)
+        changeColorAnswerButton(button: answerButton3)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.judgeGoingNextQuestionOrScoreView()
+        }
+    }
+    
+    private func changeColorAnswerButton(button: UIButton) {
+        if questionData?.answer1 == button.currentTitle {
+            button.layer.borderWidth = 4
+            button.layer.borderColor = CGColor.rgb(red: 104, green: 178, blue: 30, alpha: 1)
+        } else {
+            button.setTitle("", for: .normal)
         }
     }
     
@@ -193,7 +203,6 @@ class QuestionViewController: UIViewController {
         let allData = realm.objects(AnswerLog.self)
         let answerLog = AnswerLog()
         answerLog.id = allData.count + 1
-        print(allData.count)
         answerLog.createdAt = NSDate()
         answerLog.musicTerm = questionData!.question
         answerLog.correctOrFalse = questionData!.isCorrect()
@@ -220,13 +229,13 @@ class QuestionViewController: UIViewController {
         DispatchQueue.global().sync {
             questionData = QuestionDataManage.shared.nextQuestion()
             setQuestionLayout()
+            marubatsuImage.alpha = 0
             allAnswerButtonEnabled()
             score = 0
             solvedtime = 0
             semaphore.signal()
         }
         semaphore.wait()
-        answerView.alpha = 0
         setTimer()
     }
     

@@ -20,13 +20,24 @@ class LevelUpViewController: UIViewController {
         tapCount += 1
         tappedButton()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    
     private func setup() {
         titleLabel.text = "Lv." + String(level!.currentLevel + 1)
+    }
+    
+    private func labelAndButtonResize() {
+        let vHeight = self.view.bounds.height
+        titleLabel.font = titleLabel.font.withSize( vHeight / 24)
+        closeButton.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-R", size: vHeight / 27)
     }
     
     private func tappedButton() {

@@ -32,6 +32,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XMF-sl-YaW">
                                                     <rect key="frame" x="0.0" y="0.0" width="62.5" height="60"/>
+                                                    <color key="tintColor" red="0.86880514509999995" green="0.39581629610000002" blue="0.29054548359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="XMF-sl-YaW" secondAttribute="height" multiplier="71:68" id="4we-nq-30X"/>
                                                     </constraints>

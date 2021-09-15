@@ -13,7 +13,7 @@ struct Level {
     var nextlevelScore: Int
     var  lowestScore: Int
     var getImage: String
-    let levelText = ["かけだし","2","3","4","5","6","7","8","9","10","11","12","Max"]
+    let levelText = ["1","2","3","4","5","6","7","8","9","10","11","12","Max"]
     
     init (level:String) {
         switch level {

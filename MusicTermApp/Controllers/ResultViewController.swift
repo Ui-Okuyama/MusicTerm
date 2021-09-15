@@ -95,8 +95,8 @@ class ResultViewController: UIViewController {
         totalscoreLabel.font = totalscoreLabel.font.withSize( vHeight / 42 )
         scoreLabel.font = scoreLabel.font.withSize( vHeight / 13 )
         let fontsize = Int(toHomeButton.frame.size.height / 2.5)
-        toHomeButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
-        toListOfTerm.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
+        toHomeButton.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
+        toListOfTerm.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
     }
     
     private func setupBanner() {

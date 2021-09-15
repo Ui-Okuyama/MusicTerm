@@ -124,8 +124,8 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func labelAndButtonResize() {
         let vHeight = self.view.bounds.height
-        userName.font = userName.font.withSize(vHeight / 29)
-        levelLabel.font = levelLabel.font.withSize(vHeight / 37)
+        userName.font = userName.font.withSize(vHeight / 32)
+        levelLabel.font = levelLabel.font.withSize(vHeight / 40)
         bestScoreLabel.font = bestScoreLabel.font.withSize(vHeight / 60)
         totalScoreLabel.font = totalScoreLabel.font.withSize(vHeight / 60)
         level.font = level.font.withSize(vHeight / 60)
@@ -133,7 +133,12 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         difficultyButton1.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
         difficultyButton2.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
         difficultyButton3.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
-        difficultyButton4.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))    }
+        difficultyButton4.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
+        let fontsizeOfBottomButton = Int(toListOfTermButton.frame.size.height / 2)
+        toListOfTermButton.titleLabel?.font = toListOfTermButton.titleLabel?.font.withSize(CGFloat(fontsizeOfBottomButton))
+        toRankingViewButton.titleLabel?.font = toRankingViewButton.titleLabel?.font.withSize(CGFloat(fontsizeOfBottomButton))
+    }
+        
     
     private func presentToCountdownView(quizdata: String) {
             let storyBoard = UIStoryboard(name: "Countdown", bundle: nil)
