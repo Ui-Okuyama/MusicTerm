@@ -252,9 +252,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Beethoven" width="172.5" height="200"/>
+        <image name="Beethoven" width="345" height="400"/>
         <image name="LevelUp" width="421" height="420"/>
-        <image name="背景白" width="624" height="845"/>
+        <image name="背景白" width="208" height="281.66665649414062"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

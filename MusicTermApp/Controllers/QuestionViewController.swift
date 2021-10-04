@@ -34,8 +34,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var nokoriLabel: UILabel!
     @IBOutlet weak var monnLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
-    
     @IBOutlet weak var marubatsuImage: UIImageView!
+    
     @IBAction func tappedBackHomeButton(_ sender: Any) {
         presentToHomeViewController()
         resetTimer()
@@ -53,7 +53,7 @@ class QuestionViewController: UIViewController {
         afterTappedAnswerButton()
     }
     
-    
+//MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -70,7 +70,7 @@ class QuestionViewController: UIViewController {
         super.viewDidAppear(animated)
         setTimer()
     }
-    
+//MARK: -レイアウトセットアップ
     private func setup() {
         setQuestionLayout()
         answerButton1.layer.cornerRadius = 10
@@ -82,8 +82,8 @@ class QuestionViewController: UIViewController {
     private func setQuestionLayout() {
         QuestionLabel.text = questionData?.question
         var choices = [questionData?.answer1, questionData?.answer2, questionData?.answer3]
-        choices = choices.shuffled()
-        UIView.setAnimationsEnabled(false)
+        choices = choices.shuffled() //選択肢の順番をランダムに
+        UIView.setAnimationsEnabled(false) //問題が変わるときのアニメーションをなくす
         answerButton1.setTitle(choices[0], for: .normal)
         answerButton1.layer.borderWidth = 0
         answerButton1.layoutIfNeeded()
@@ -118,12 +118,12 @@ class QuestionViewController: UIViewController {
         let backfontsize = Int(answerButton1.frame.size.height / 2.5)
         backHomeButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(backfontsize))
     }
-    
+//MARK: -タイマー系
     private func setTimer() {
         timeStartingToSolve = Date()
-        
+        //barのゲージを動かすためのタイマー
         progressbarTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(moveProgressBar), userInfo: nil, repeats: true)
-        
+        //時間切れの時に不正解&次の問題に変えるためのタイマー
         limitTimer = Timer.scheduledTimer(timeInterval: 5.05, target: self, selector: #selector(doneTimer), userInfo: nil, repeats: true)
     }
     
@@ -140,15 +140,11 @@ class QuestionViewController: UIViewController {
         progressbarTimer?.invalidate()
         limitTimer?.invalidate()
     }
-    
-    private func presentToHomeViewController() {
-        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
-    }
-    
+//MARK: -ユーザーが答えを選択した後
     private func afterTappedAnswerButton() {
         allAnswerButtonDisabled()
         resetTimer()
-        timeFinisedToSolve = Date()
+        timeFinisedToSolve = Date() //解答時間を計算するための
         
         if questionData!.isCorrect() {
             print("correct")
@@ -172,6 +168,7 @@ class QuestionViewController: UIViewController {
     }
     
     private func changeColorAnswerButton(button: UIButton) {
+        //正解のボタンは枠を緑に、不正解のボタンは字を消す
         if questionData?.answer1 == button.currentTitle {
             button.layer.borderWidth = 4
             button.layer.borderColor = CGColor.rgb(red: 104, green: 178, blue: 30, alpha: 1)
@@ -179,7 +176,7 @@ class QuestionViewController: UIViewController {
             button.setTitle("", for: .normal)
         }
     }
-    
+//MARK: -スコア計算
     private func culcurateScore() {
         solvedtime = 5 - (self.timeFinisedToSolve.timeIntervalSince(timeStartingToSolve))
         
@@ -198,7 +195,7 @@ class QuestionViewController: UIViewController {
         totalScore += Int(score * solvedtime)
         print(score,totalScore,Int(solvedtime))
     }
-    
+//解答した問題のリストを別画面のリストビューで表示するため
     private func saveToRealm() {
         let allData = realm.objects(AnswerLog.self)
         let answerLog = AnswerLog()
@@ -215,7 +212,7 @@ class QuestionViewController: UIViewController {
             print("err:\(error)")
         }
     }
-    
+//MARK: -次の問題に移る
     private func judgeGoingNextQuestionOrScoreView() {
         if QuestionDataManage.nowQuestionIndex == 15 {
             presentToScoreViewController()
@@ -238,7 +235,7 @@ class QuestionViewController: UIViewController {
         semaphore.wait()
         setTimer()
     }
-    
+//MARK: -画面遷移の関数
     private func presentToScoreViewController() {
         let storyboards = UIStoryboard(name: "Result", bundle: nil)
         let resultViewController = storyboards.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
@@ -246,6 +243,10 @@ class QuestionViewController: UIViewController {
         resultViewController.score = totalScore
         print(totalScore)
         navigationController?.pushViewController(resultViewController, animated: true)
+    }
+    
+    private func presentToHomeViewController() {
+        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
     
     private func allAnswerButtonDisabled() {
@@ -259,11 +260,4 @@ class QuestionViewController: UIViewController {
         answerButton2.isEnabled = true
         answerButton3.isEnabled = true
     }
-    
-    private func resetTimeAndScore() {
-        score = 0
-        solvedtime = 0
-    }
 }
-
-

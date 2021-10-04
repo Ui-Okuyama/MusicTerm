@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="JK-Maru-Gothic-M.otf">
+            <string>JK-Maru-Gothic-M</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Setting View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SettingViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-Hj-zlO">
+                                <rect key="frame" x="103" y="420" width="169" height="42.5"/>
+                                <color key="backgroundColor" red="0.86880514509999995" green="0.39581629610000002" blue="0.29054548359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gey-Hj-zlO" secondAttribute="height" multiplier="4:1" id="Aa9-nT-qf1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="17"/>
+                                <state key="normal" title="レビュー">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-wW-gX4">
+                                <rect key="frame" x="20.5" y="240" width="323.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="効果音" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHv-4A-FRE">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                        <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cd5-to-9sT">
+                                        <rect key="frame" x="59" y="0.0" width="266.5" height="31"/>
+                                        <color key="tintColor" red="0.012287238610000001" green="0.36509025099999998" blue="0.5554557443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="touchUpSoundEffect:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tXv-nu-yWi"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl6-dJ-pES">
+                                <rect key="frame" x="103" y="502.5" width="169" height="42"/>
+                                <color key="backgroundColor" red="0.29935899379999997" green="0.60999411339999998" blue="0.90386992690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zl6-dJ-pES" secondAttribute="height" multiplier="4:1" id="huB-Mz-NAy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="@U_Okuyama_Devlp">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBu-T8-xlD">
+                                <rect key="frame" x="30" y="30" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NBu-T8-xlD" secondAttribute="height" multiplier="1:1" id="2s6-9l-0R4"/>
+                                    <constraint firstAttribute="width" constant="35" id="jme-Of-e9y"/>
+                                </constraints>
+                                <color key="tintColor" red="0.012287238610000001" green="0.36509025099999998" blue="0.5554557443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="multiply.circle.fill" catalog="system">
+                                    <color key="titleColor" red="0.012287238610000001" green="0.36509025099999998" blue="0.5554557443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSettingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bjh-tp-6zW"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5lc-Ps-LvZ">
+                                <rect key="frame" x="31" y="185" width="313" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BGM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udu-nW-6TV">
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JV5-jB-C7w">
+                                        <rect key="frame" x="48.5" y="0.0" width="266.5" height="31"/>
+                                        <color key="tintColor" red="0.012287238610000001" green="0.36509025099999998" blue="0.5554557443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="touchUpBGMSlider:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="n4l-yC-AsV"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NBu-T8-xlD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Byz-Vp-dL5"/>
+                            <constraint firstItem="zl6-dJ-pES" firstAttribute="top" secondItem="Gey-Hj-zlO" secondAttribute="bottom" constant="40" id="DJm-3Z-pCj"/>
+                            <constraint firstItem="Sal-wW-gX4" firstAttribute="trailing" secondItem="5lc-Ps-LvZ" secondAttribute="trailing" id="EAJ-1c-gYp"/>
+                            <constraint firstItem="Gey-Hj-zlO" firstAttribute="top" secondItem="Sal-wW-gX4" secondAttribute="bottom" constant="150" id="G7M-0u-otD"/>
+                            <constraint firstItem="Sal-wW-gX4" firstAttribute="top" secondItem="5lc-Ps-LvZ" secondAttribute="bottom" constant="25" id="JdX-tZ-c1a"/>
+                            <constraint firstItem="JV5-jB-C7w" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="NWC-TU-6NF"/>
+                            <constraint firstItem="cd5-to-9sT" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="Ouk-aw-L44"/>
+                            <constraint firstItem="5lc-Ps-LvZ" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" multiplier="3:5" id="VLh-L1-QnN"/>
+                            <constraint firstItem="zl6-dJ-pES" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ffe-UT-sAD"/>
+                            <constraint firstItem="Gey-Hj-zlO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iNZ-Ev-Tyf"/>
+                            <constraint firstItem="5lc-Ps-LvZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nhp-FY-Sgi"/>
+                            <constraint firstItem="NBu-T8-xlD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="psF-tG-P5G"/>
+                            <constraint firstItem="zl6-dJ-pES" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.45" id="rZA-Hw-dvk"/>
+                            <constraint firstItem="Gey-Hj-zlO" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.45" id="wlZ-D9-uAP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BGMSlider" destination="JV5-jB-C7w" id="6CJ-6O-T19"/>
+                        <outlet property="closeButton" destination="NBu-T8-xlD" id="oKP-ij-K7u"/>
+                        <outlet property="reviewButton" destination="Gey-Hj-zlO" id="s4t-ZU-vNI"/>
+                        <outlet property="soundEffectSlider" destination="cd5-to-9sT" id="EHj-yR-7vf"/>
+                        <outlet property="twitterButton" destination="zl6-dJ-pES" id="GC3-sm-YUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="49"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

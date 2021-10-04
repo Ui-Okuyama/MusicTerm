@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MusicTermApp
 //
-//  Created by 槙和馬 on 2021/08/22.
+//  Created by 奥山羽衣　on 2021/08/22.
 //
 
 import UIKit
@@ -16,54 +16,46 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var settingButton: UIButton!
     
     @IBAction func TappedSettingButton(_ sender: Any) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
-        let test = realm.objects(AnswerLog.self)
-        print(test)
-    }
-    
-    @IBAction func touchdownStartButton(_ sender: Any) {
-        changeColorButton()
+        presentToSettingViewController()
     }
     @IBAction func tappedStartButton(_ sender: Any) {
         presentToHomeViewController()
     }
     
+//MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-            self.signInFirebaseAnonymouslyUser()
-        }
+        self.signInFirebaseAnonymouslyUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-    }
 
+//MARK: -レイアウトセットアップ
     private func setupViews() {
         let icon = UIImage(systemName: "gearshape.fill")
         settingButton.setImage(icon, for: .normal)
+        settingButton.imageView?.contentMode = .scaleAspectFit
+        settingButton.contentHorizontalAlignment = .fill
+        settingButton.contentVerticalAlignment = .fill
         startButton.layer.cornerRadius = 15
     }
-    
+//MARK: -画面遷移
     private func presentToHomeViewController() {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let homeViewController = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
         homeViewController.user = user
         navigationController?.pushViewController(homeViewController, animated: true)
     }
     
-    private func changeColorButton() {
-        startButton.backgroundColor = UIColor.rgb(red: 161, green: 101, blue: 74, alpha: 1)
+    private func presentToSettingViewController() {
+        let storyboard = UIStoryboard(name: "Setting", bundle: nil)
+        let settingViewController = storyboard.instantiateViewController(identifier: "SettingViewController") as! SettingViewController
+        present(settingViewController, animated: true, completion: nil)
     }
-    
+//MARK: -Firebase
     private func signInFirebaseAnonymouslyUser() {
         Auth.auth().signInAnonymously() { (authResult, error) in
             if error != nil {
@@ -77,7 +69,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             self.fetchUserInfoFromFirebase()
         }
     }
-    
+    //ユーザー認証
     private func fetchUserInfoFromFirebase() {
         let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.getDocument { (document, err) in
@@ -91,9 +83,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }
     }
-    
+    //新規ユーザー登録
     private func addNewUserInfoToFirebase(userRef: DocumentReference) {
-        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "かけだし", "currentImage": "Mozart", "images": ["Mozart", "J.S.Bach", "Beethoven", "Debussy", "Tchaikovsky", "Chopin"]] as [String : Any]
+        let newData = ["name": "ナナシさん", "totalScore": 0, "bestScore": 0, "level": "はじめまして！", "currentImage": "Mozart", "images": ["Mozart", "J.S.Bach", "Beethoven", "Debussy", "Tchaikovsky", "Chopin"]] as [String : Any]
         userRef.setData(newData){(err) in
             if let err = err {
                 print("Firestoreへの保存に失敗しました。\(err)")
@@ -101,7 +93,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         return
         }
         user = User.init(dic: newData)
-        print(user!.name)
+        //音量初期値セット
+        UserDefaults.standard.setValue(1.0, forKey: "bgmVolume")
+        UserDefaults.standard.setValue(1.0, forKey: "soundEffectVolume")
     }
 }
 

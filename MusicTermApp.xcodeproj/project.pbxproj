@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		01FFE01CBE8919EE3A71154F /* Pods_MusicTermApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7E24B1CD873C948D14C1CB /* Pods_MusicTermApp.framework */; };
+		6A11CBE1270860200061439C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11CBE0270860200061439C /* SettingViewController.swift */; };
+		6A11CBE3270860B20061439C /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A11CBE2270860B20061439C /* Setting.storyboard */; };
+		6A11CBE62708670E0061439C /* クイズ正解.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A11CBE52708670E0061439C /* クイズ正解.mp3 */; };
+		6A11CBE82708671F0061439C /* クイズ不正解.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A11CBE72708671F0061439C /* クイズ不正解.mp3 */; };
 		6A36813D26E89A070060A3A0 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36813C26E89A070060A3A0 /* RankingViewController.swift */; };
 		6A36814126E8AAE80060A3A0 /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */; };
 		6A36814326E926200060A3A0 /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36814226E926200060A3A0 /* LevelUpViewController.swift */; };
@@ -16,6 +20,9 @@
 		6A36815926ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36815826ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf */; };
 		6A36816026ED37110060A3A0 /* YasashisaGothicBold-V2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36815F26ED37100060A3A0 /* YasashisaGothicBold-V2.otf */; };
 		6A36816326EDF8680060A3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A36816126EDCF5C0060A3A0 /* Assets.xcassets */; };
+		6A36816526F5BD8A0060A3A0 /* quizdataNormal.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6A36816426F5BD890060A3A0 /* quizdataNormal.csv */; };
+		6A36816726F5BDA60060A3A0 /* quizdataHard.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6A36816626F5BDA60060A3A0 /* quizdataHard.csv */; };
+		6A36816B26F5BEAC0060A3A0 /* quizdataLunatic.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6A36816A26F5BEAC0060A3A0 /* quizdataLunatic.csv */; };
 		6A9A228B26D19E8200CBD801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228A26D19E8200CBD801 /* AppDelegate.swift */; };
 		6A9A228D26D19E8200CBD801 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */; };
 		6A9A228F26D19E8200CBD801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A228E26D19E8200CBD801 /* ViewController.swift */; };
@@ -46,6 +53,10 @@
 /* Begin PBXFileReference section */
 		13DFD51AE8444E58C6C33A97 /* Pods-MusicTermApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTermApp.debug.xcconfig"; path = "Target Support Files/Pods-MusicTermApp/Pods-MusicTermApp.debug.xcconfig"; sourceTree = "<group>"; };
 		57D840410F7B8A132F813439 /* Pods-MusicTermApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTermApp.release.xcconfig"; path = "Target Support Files/Pods-MusicTermApp/Pods-MusicTermApp.release.xcconfig"; sourceTree = "<group>"; };
+		6A11CBE0270860200061439C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		6A11CBE2270860B20061439C /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		6A11CBE52708670E0061439C /* クイズ正解.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "クイズ正解.mp3"; sourceTree = "<group>"; };
+		6A11CBE72708671F0061439C /* クイズ不正解.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "クイズ不正解.mp3"; sourceTree = "<group>"; };
 		6A36813C26E89A070060A3A0 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		6A36814226E926200060A3A0 /* LevelUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +65,9 @@
 		6A36815826ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JK-Maru-Gothic-M.otf"; sourceTree = "<group>"; };
 		6A36815F26ED37100060A3A0 /* YasashisaGothicBold-V2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YasashisaGothicBold-V2.otf"; sourceTree = "<group>"; };
 		6A36816126EDCF5C0060A3A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A36816426F5BD890060A3A0 /* quizdataNormal.csv */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = quizdataNormal.csv; sourceTree = "<group>"; };
+		6A36816626F5BDA60060A3A0 /* quizdataHard.csv */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = quizdataHard.csv; sourceTree = "<group>"; };
+		6A36816A26F5BEAC0060A3A0 /* quizdataLunatic.csv */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = quizdataLunatic.csv; sourceTree = "<group>"; };
 		6A9A228726D19E8200CBD801 /* MusicTermApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTermApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9A228A26D19E8200CBD801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A9A228C26D19E8200CBD801 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +127,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6A11CBE4270866F60061439C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6A11CBE52708670E0061439C /* クイズ正解.mp3 */,
+				6A11CBE72708671F0061439C /* クイズ不正解.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		6A36815C26ED31B70060A3A0 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +167,7 @@
 		6A9A228926D19E8200CBD801 /* MusicTermApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A11CBE4270866F60061439C /* Sounds */,
 				6A9A22A526D2384A00CBD801 /* Models */,
 				6A9A22A426D2383D00CBD801 /* Controllers */,
 				6A9A22A326D2381C00CBD801 /* Storyboards */,
@@ -177,6 +201,7 @@
 				6A9A22C326DBC48B00CBD801 /* Question.storyboard */,
 				6A9A22CF26E3673B00CBD801 /* Result.storyboard */,
 				6AE6A40A26E50B2600A36EE8 /* List.storyboard */,
+				6A11CBE2270860B20061439C /* Setting.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -196,6 +221,7 @@
 				6A36813C26E89A070060A3A0 /* RankingViewController.swift */,
 				6A36814026E8AAE80060A3A0 /* RankingTableViewCell.swift */,
 				6A36814226E926200060A3A0 /* LevelUpViewController.swift */,
+				6A11CBE0270860200061439C /* SettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +231,9 @@
 			children = (
 				6A9A22A626D2387000CBD801 /* User.swift */,
 				6A9A22C726DD1CD600CBD801 /* quizdataEasy.csv */,
+				6A36816426F5BD890060A3A0 /* quizdataNormal.csv */,
+				6A36816626F5BDA60060A3A0 /* quizdataHard.csv */,
+				6A36816A26F5BEAC0060A3A0 /* quizdataLunatic.csv */,
 				6A9A22C926DDCB3700CBD801 /* QuestionData.swift */,
 				6A9A22CD26E1311400CBD801 /* AnswerLog.swift */,
 				6A36814826EA061D0060A3A0 /* Level.swift */,
@@ -272,16 +301,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A36816326EDF8680060A3A0 /* Assets.xcassets in Resources */,
+				6A11CBE62708670E0061439C /* クイズ正解.mp3 in Resources */,
+				6A36816526F5BD8A0060A3A0 /* quizdataNormal.csv in Resources */,
 				6A9A229726D19E8500CBD801 /* LaunchScreen.storyboard in Resources */,
 				6A36816026ED37110060A3A0 /* YasashisaGothicBold-V2.otf in Resources */,
+				6A11CBE82708671F0061439C /* クイズ不正解.mp3 in Resources */,
 				6A9A22BE26DB7F7100CBD801 /* Countdown.storyboard in Resources */,
+				6A11CBE3270860B20061439C /* Setting.storyboard in Resources */,
 				6A36815226ECE2DE0060A3A0 /* UmiYamaLogoGothic-R.otf in Resources */,
 				6A9A22C426DBC48B00CBD801 /* Question.storyboard in Resources */,
 				6A9A229F26D19F6800CBD801 /* GoogleService-Info.plist in Resources */,
 				6A9A22B026D3D0E900CBD801 /* ProfileEdit.storyboard in Resources */,
+				6A36816B26F5BEAC0060A3A0 /* quizdataLunatic.csv in Resources */,
 				6A9A22D026E3673D00CBD801 /* Result.storyboard in Resources */,
 				6A9A22C826DD1CD700CBD801 /* quizdataEasy.csv in Resources */,
 				6A9A229226D19E8200CBD801 /* Main.storyboard in Resources */,
+				6A36816726F5BDA60060A3A0 /* quizdataHard.csv in Resources */,
 				6A36815926ED2D1E0060A3A0 /* JK-Maru-Gothic-M.otf in Resources */,
 				6AE6A40B26E50B2600A36EE8 /* List.storyboard in Resources */,
 				6A9A22AB26D23E6B00CBD801 /* Home.storyboard in Resources */,
@@ -352,6 +387,7 @@
 				6A9A22C026DB7F9D00CBD801 /* CountdownViewController.swift in Sources */,
 				6A9A22CA26DDCB3800CBD801 /* QuestionData.swift in Sources */,
 				6A9A22B226D3D10900CBD801 /* ProfileEditController.swift in Sources */,
+				6A11CBE1270860200061439C /* SettingViewController.swift in Sources */,
 				6A9A22B626D7FA7300CBD801 /* ModalProfileViewController.swift in Sources */,
 				6A9A22C626DBC4C300CBD801 /* QuestionViewController.swift in Sources */,
 				6A36814926EA061D0060A3A0 /* Level.swift in Sources */,

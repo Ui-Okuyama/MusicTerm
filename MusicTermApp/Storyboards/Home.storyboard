@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-dZ-33A">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景白" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-dZ-33A">
                                 <rect key="frame" x="-66" y="0.0" width="507" height="667"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GQQ-dZ-33A" secondAttribute="height" multiplier="313:412" id="xiE-0Q-KiE"/>
@@ -94,25 +94,25 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5c9-qZ-Kcl">
-                                        <rect key="frame" x="89" y="26.5" width="200" height="70.5"/>
+                                        <rect key="frame" x="89" y="26.5" width="273" height="70.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-8e-DcX">
-                                                <rect key="frame" x="0.0" y="0.0" width="105" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさんああああああああ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-8e-DcX">
+                                                <rect key="frame" x="0.0" y="0.0" width="273" height="20"/>
                                                 <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="T2h-jL-v9Q">
-                                                <rect key="frame" x="0.0" y="26" width="93.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="25" width="98.5" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-HH-Mvr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-sW-Ffx">
-                                                        <rect key="frame" x="54.5" y="5.5" width="39" height="15.5"/>
+                                                        <rect key="frame" x="59.5" y="7.5" width="39" height="13"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="13"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -120,22 +120,22 @@
                                                 </subviews>
                                             </stackView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qkD-0a-gW4">
-                                                <rect key="frame" x="0.0" y="52" width="200" height="3.5"/>
+                                                <rect key="frame" x="0.0" y="50.5" width="200" height="4"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="progressTintColor" name="AccentColor"/>
                                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="43A-ci-q0T">
-                                                <rect key="frame" x="0.0" y="60.5" width="168" height="10"/>
+                                                <rect key="frame" x="0.0" y="59.5" width="170" height="11"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="総スコア：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="1b5-lg-MSF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="10"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="68" height="11"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベストスコア：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="soI-Qz-zXV">
-                                                        <rect key="frame" x="77" y="0.0" width="91" height="10"/>
+                                                        <rect key="frame" x="78" y="0.0" width="92" height="11"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" cyan="1" magenta="0.75693890764996719" yellow="0.56469811926354896" black="0.32218059671336208" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <color key="backgroundColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="5c9-qZ-Kcl" firstAttribute="leading" secondItem="mRw-Ik-YR4" secondAttribute="trailing" id="EL6-4Z-ll3"/>
@@ -200,7 +200,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" cyan="0.77546830610795459" magenta="0.44300340772508739" yellow="0.3356607077005026" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SbF-z0-EyT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0de-Nw-BOi"/>
                             <constraint firstItem="zxD-dR-0nG" firstAttribute="top" secondItem="HJU-XL-SoD" secondAttribute="bottom" constant="40" id="3gr-9I-rcK"/>
@@ -396,8 +396,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mozart" width="267" height="349.5"/>
-        <image name="背景" width="679" height="901"/>
+        <image name="Mozart" width="534" height="699"/>
+        <image name="背景白" width="208" height="281.66665649414062"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

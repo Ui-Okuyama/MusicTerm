@@ -19,6 +19,7 @@ class CountdownViewController: UIViewController {
     var quizdata: String?
     var questionData: QuestionData?
     
+//MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
@@ -39,6 +40,7 @@ class CountdownViewController: UIViewController {
         startCountdown()
     }
     
+//MARK: -private関数
     private func startCountdown() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
             self.count += 1

@@ -37,23 +37,15 @@ class ResultViewController: UIViewController {
     @IBAction func tappedListOfTerm(_ sender: Any) {
         presentToListViewController()
     }
-    
+//MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         setupBanner()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         fetchUserInfoFromFirebase { (user) in
             self.setupWithUserdata()
             self.judgeLevelUp()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
     
     override func viewWillLayoutSubviews() {
@@ -61,19 +53,15 @@ class ResultViewController: UIViewController {
         labelAndButtonResize()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        updateTotalScoreFirestoreData()
-    }
-    
-    func setup() {
+//MARK: -レイアウトセットアップ
+    private func setup() {
         commentView.layer.cornerRadius = 30
         toHomeButton.layer.cornerRadius = 15
         toListOfTerm.layer.cornerRadius = 15
         scoreLabel.text = String(score!)
     }
     
-    func setupWithUserdata() {
+    private func setupWithUserdata() {
         if score! > (user?.bestScore)! {
             bestscoreLabel.text = "ベストスコア: \(score!)"
             updateBestScoreFirestoreData()
@@ -81,11 +69,17 @@ class ResultViewController: UIViewController {
             bestscoreLabel.text = "ベストスコア: \((user?.bestScore)!)"
         }
         newTotalScore = (user?.totalScore)! + score!
-        totalscoreLabel.text = "総スコア: \(newTotalScore!)"
+        if newTotalScore! >= 100000000 {
+            totalscoreLabel.text = "総スコア: 99999999"
+            newTotalScore = 99999999
+        } else {
+            totalscoreLabel.text = "総スコア: \(newTotalScore!)"
+        }
+        updateTotalScoreFirestoreData()
         composerImage.image = UIImage(named: (user?.currentImage)!)
     }
     
-    func labelAndButtonResize() {
+    private func labelAndButtonResize() {
         let vHeight = view.bounds.height
         viewTitleLabel.font = viewTitleLabel.font.withSize( vHeight / 30 )
         viewTitleLabel.sizeToFit()
@@ -104,7 +98,8 @@ class ResultViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
-    
+
+//MARK: -Firebase
     private func fetchUserInfoFromFirebase(comletion: @escaping (User) -> Void) {
         let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.getDocument { [self] (document, err) in
@@ -118,14 +113,17 @@ class ResultViewController: UIViewController {
     }
     
     private func judgeLevelUp() {
+        print(user!.level)
         level = Level.init(level: user!.level)
         if level!.jugdeNextLevel(totalScore: newTotalScore!) {
             newLevelText = level!.nextLevelName()
             presentToLevelUpViewController()
             updateLevelFirestoreData()
+        } else {
+            print("no levelup")
         }
     }
-    
+ //MARK: -Firestoreのデータの更新
     private func updateLevelFirestoreData() {
         userRef.updateData(["level" : newLevelText!]) { err in
             if let err = err {
@@ -149,7 +147,7 @@ class ResultViewController: UIViewController {
             }
         }
     }
-    
+ //MARK: - 画面遷移
     private func presentToHomeViewController() {
         navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
@@ -164,10 +162,12 @@ class ResultViewController: UIViewController {
         let levelUpViewController = storyboard?.instantiateViewController(identifier: "LevelUpViewController") as! LevelUpViewController
         levelUpViewController.presentationController?.delegate = self
         levelUpViewController.level = level
+        levelUpViewController.levelText = newLevelText
         present(levelUpViewController, animated: true, completion: nil)
     }
 }
 
+//MARK: -extension
 extension ResultViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
         fetchUserInfoFromFirebase { user in

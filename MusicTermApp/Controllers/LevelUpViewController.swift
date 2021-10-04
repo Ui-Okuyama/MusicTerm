@@ -7,11 +7,13 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class LevelUpViewController: UIViewController {
     
     var level:Level?
     var tapCount = 0
+    var levelText:String?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var levelUpImageView: UIImageView!
@@ -31,23 +33,31 @@ class LevelUpViewController: UIViewController {
     }
     
     private func setup() {
-        titleLabel.text = "Lv." + String(level!.currentLevel + 1)
+        titleLabel.text = levelText! + "レベル"
     }
     
     private func labelAndButtonResize() {
         let vHeight = self.view.bounds.height
-        titleLabel.font = titleLabel.font.withSize( vHeight / 24)
+        titleLabel.font = titleLabel.font.withSize( vHeight / 30)
         closeButton.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-R", size: vHeight / 27)
     }
     
     private func tappedButton() {
         if tapCount == 1 {
             levelUpImageView.image = UIImage(named: level!.getImage)
-            titleLabel.text = "新しいサムネイルを取得しました！"
+            titleLabel.text = "\(level!.getImage)を選択できるようになりました！"
             closeButton.setTitle("閉じる", for: .normal)
-            
+            updateImages()
         } else {
             dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    private func updateImages() {
+        Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!).updateData(["images": FieldValue.arrayUnion([level!.getImage])]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            }
         }
     }
 }

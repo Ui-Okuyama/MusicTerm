@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景暗色" translatesAutoresizingMaskIntoConstraints="NO" id="0ZV-gi-iH1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景白" translatesAutoresizingMaskIntoConstraints="NO" id="0ZV-gi-iH1">
                                 <rect key="frame" x="-62.5" y="0.0" width="500" height="667"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0ZV-gi-iH1" secondAttribute="height" multiplier="500:667" id="Ce9-Kz-HeT"/>
@@ -60,19 +60,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベストスコア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bhp-Te-dIc">
                                 <rect key="frame" x="136.5" y="475.5" width="102" height="17"/>
                                 <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="総スコア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FaZ-yN-QCc">
                                 <rect key="frame" x="153.5" y="398.5" width="68" height="17"/>
                                 <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レベル" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-QX-hCF">
                                 <rect key="frame" x="160.5" y="322.5" width="54" height="18"/>
                                 <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dec-Yy-uPu">
@@ -93,22 +93,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アイコン•名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L70-2Q-3O7">
-                                <rect key="frame" x="105" y="30" width="165.5" height="26"/>
-                                <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="26"/>
-                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <rect key="frame" x="98.5" y="30" width="178" height="28"/>
+                                <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="28"/>
+                                <color key="textColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jca-dJ-E9r">
                                 <rect key="frame" x="233" y="106" width="21" height="22"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="square.and.pencil" catalog="system"/>
+                                <color key="tintColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal" image="square.and.pencil" catalog="system">
+                                    <color key="titleColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="tappedChangeImageButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KcO-VY-hIZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" cyan="0.87679573539253719" magenta="0.54539511087057468" yellow="0.30975982025786714" black="0.34909625875538791" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FaZ-yN-QCc" firstAttribute="top" secondItem="5IA-lE-SmJ" secondAttribute="bottom" constant="18" id="5JK-0v-wbX"/>
                             <constraint firstItem="gqW-f6-lFo" firstAttribute="top" secondItem="bhp-Te-dIc" secondAttribute="bottom" constant="5" id="5Oc-tm-ace"/>
@@ -258,9 +260,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mozart" width="267" height="349.5"/>
+        <image name="Mozart" width="534" height="699"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
-        <image name="背景暗色" width="679" height="901"/>
+        <image name="背景白" width="208" height="281.66665649414062"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -272,9 +274,6 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

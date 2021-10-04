@@ -49,21 +49,20 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         presentToRankingViewController()
     }
     
+//MARK: - ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHomeViews()
         setupBanner()
-        
-        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedProfileView(_:)))
-        self.profileView.addGestureRecognizer(tapGesture)
-            
-        tapGesture.delegate = self
-            }
+        setupTapGestureForProfileView()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
-        fetchUserInfoFromFirebase()
+        fetchUserInfoFromFirebase{ (user) in
+            self.setupWithUserData()
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -71,6 +70,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         labelAndButtonResize()
     }
     
+//MARK: -レイアウトセットアップ
     private func setupHomeViews() {
         self.view.sendSubviewToBack(profileView)
         self.view.sendSubviewToBack(backgroundImageView)
@@ -82,44 +82,14 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         difficultyButton3.layer.borderColor = CGColor.rgb(red: 212, green: 122, blue: 189, alpha: 1)
         buttonLayout(button: difficultyButton4)
         difficultyButton4.layer.borderColor = CGColor.rgb(red: 221, green: 111, blue: 81, alpha: 1)
-    }
-    
-    private func setupBanner() {
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        toListOfTermButton.layer.cornerRadius = 10
+        toRankingViewButton.layer.cornerRadius = 10
     }
     
     private func buttonLayout(button: UIButton) {
         button.layer.cornerRadius = 20
         button.layer.borderWidth = 7
         button.titleLabel?.adjustsFontSizeToFitWidth = true
-    }
-    
-    private func fetchUserInfoFromFirebase() {
-        let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
-        userRef.getDocument { [self] (document, err) in
-            if let err = err {
-                print("ユーザー情報の取得に失敗しました。\(err)")
-            }
-            guard let data = document!.data() else { return }
-            self.user = User.init(dic: data)
-            userName.text = user?.name
-            levelLabel.text = user?.level
-            totalScoreLabel.text = "総スコア：" + String(user!.totalScore)
-            bestScoreLabel.text = "ベストスコア：" + String(user!.bestScore)
-            profileImage.image = UIImage(named: user!.currentImage)
-            UserDefaults.standard.set(user?.images, forKey: "images")
-            print(self.user!.name)
-        }
-    }
-    
-    @objc func tappedProfileView(_ sender: UITapGestureRecognizer) {
-        let storyBoard = UIStoryboard(name: "ProfileEdit", bundle: nil)
-        let profileEditController = storyBoard.instantiateViewController(identifier: "ProfileEditController") as! ProfileEditController
-        profileEditController.modalPresentationStyle = .fullScreen
-        profileEditController.user = user
-        navigationController?.pushViewController(profileEditController, animated: true)
     }
     
     private func labelAndButtonResize() {
@@ -138,8 +108,54 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         toListOfTermButton.titleLabel?.font = toListOfTermButton.titleLabel?.font.withSize(CGFloat(fontsizeOfBottomButton))
         toRankingViewButton.titleLabel?.font = toRankingViewButton.titleLabel?.font.withSize(CGFloat(fontsizeOfBottomButton))
     }
-        
+ 
+//MARK: -ユーザー情報
+    private func fetchUserInfoFromFirebase(completion: @escaping (User) -> Void) {
+        let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
+        userRef.getDocument { [self] (document, err) in
+            if let err = err {
+                print("ユーザー情報の取得に失敗しました。\(err)")
+            }
+            guard let data = document!.data() else { return }
+            self.user = User.init(dic: data)
+            completion(self.user!)
+        }
+    }
     
+    private func setupWithUserData() {
+        userName.text = user?.name
+        levelLabel.text = user?.level
+        let level = Level.init(level: user!.level)
+        levelBar.progress = level.culcurateProgressRate(totalScore: user!.totalScore)
+        
+        totalScoreLabel.text = "総スコア：" + String(user!.totalScore)
+        bestScoreLabel.text = "ベストスコア：" + String(user!.bestScore)
+        profileImage.image = UIImage(named: user!.currentImage)
+        UserDefaults.standard.set(user?.images, forKey: "images")
+        print(self.user!.name)
+    }
+    
+    private func setupBanner() {
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
+ //MARK: -TapGesture ProfileView
+    private func setupTapGestureForProfileView() {
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedProfileView(_:)))
+        self.profileView.addGestureRecognizer(tapGesture)
+        tapGesture.delegate = self
+    }
+//MARK: -画面遷移
+    
+    @objc func tappedProfileView(_ sender: UITapGestureRecognizer) {
+        let storyBoard = UIStoryboard(name: "ProfileEdit", bundle: nil)
+        let profileEditController = storyBoard.instantiateViewController(identifier: "ProfileEditController") as! ProfileEditController
+        profileEditController.modalPresentationStyle = .fullScreen
+        profileEditController.user = user
+        navigationController?.pushViewController(profileEditController, animated: true)
+    }
+        
     private func presentToCountdownView(quizdata: String) {
             let storyBoard = UIStoryboard(name: "Countdown", bundle: nil)
             let countdownViewController = storyBoard.instantiateViewController(identifier: "CountdownViewController") as! CountdownViewController

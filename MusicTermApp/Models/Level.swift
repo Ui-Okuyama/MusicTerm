@@ -11,77 +11,77 @@ struct Level {
     
     var currentLevel: Int
     var nextlevelScore: Int
-    var  lowestScore: Int
+    var lowestScore: Int
     var getImage: String
-    let levelText = ["1","2","3","4","5","6","7","8","9","10","11","12","Max"]
+    let levelText = ["はじめまして！","まだまだひよっこ","少し慣れてきた","楽語？まぁまぁ知ってるよ","音楽好きの平均","一人前の楽語イスト","ステキな楽語イスト","楽語に夢中","専科は楽器？それとも…楽語？","楽語愛を叫びたい！","どこまで極めるつもり？","楽語と共に生きていくんだ","究極の楽語マスター"]
     
     init (level:String) {
         switch level {
-        case "1":
+        case "はじめまして！":
             currentLevel = 1
-            nextlevelScore = 1000
+            nextlevelScore = 10000
             lowestScore = 0
             getImage = "Brahms"
-        case "2":
+        case "まだまだひよっこ":
             currentLevel = 2
-            nextlevelScore = 2500
-            lowestScore = 1001
-            getImage = "Brahms"
-        case "3":
+            nextlevelScore = 30000
+            lowestScore = 10001
+            getImage = "Haydn"
+        case "少し慣れてきた":
             currentLevel = 3
-            nextlevelScore = 4500
-            lowestScore = 2501
-            getImage = "Brahms"
-        case "4":
+            nextlevelScore = 60000
+            lowestScore = 30001
+            getImage = "Schubert"
+        case "楽語？まぁまぁ知ってるよ":
             currentLevel = 4
-            nextlevelScore = 70000
-            lowestScore = 4501
-            getImage = "Brahms"
-        case "5":
-            currentLevel = 5
             nextlevelScore = 100000
-            lowestScore = 70001
-            getImage = "Brahms"
-        case "6":
-            currentLevel = 6
+            lowestScore = 60001
+            getImage = "Ravel"
+        case "音楽好きの平均":
+            currentLevel = 5
             nextlevelScore = 150000
             lowestScore = 100001
-            getImage = "Brahms"
-        case "7":
+            getImage = "Schumann"
+        case "一人前の楽語イスト":
+            currentLevel = 6
+            nextlevelScore = 250000
+            lowestScore = 120001
+            getImage = "Liszt"
+        case "ステキな楽語イスト":
             currentLevel = 7
-            nextlevelScore = 300000
-            lowestScore = 150001
-            getImage = "Brahms"
-        case "8":
-            currentLevel = 8
             nextlevelScore = 500000
-            lowestScore = 300001
-            getImage = "Brahms"
-        case "9":
-            currentLevel = 9
-            nextlevelScore = 800000
+            lowestScore = 250001
+            getImage = "Paganini"
+        case "楽語に夢中":
+            currentLevel = 8
+            nextlevelScore = 1000000
             lowestScore = 500001
-            getImage = "Brahms"
-        case "10":
-            currentLevel = 10
-            nextlevelScore = 1300000
-            lowestScore = 800001
-            getImage = "Brahms"
-        case "11":
-            currentLevel = 11
+            getImage = "Handel"
+        case "専科は楽器？それとも…楽語？":
+            currentLevel = 9
             nextlevelScore = 2000000
-            lowestScore = 1300001
-            getImage = "Brahms"
-        case "12":
-            currentLevel = 12
-            nextlevelScore = 5000000
+            lowestScore = 1000001
+            getImage = "Grieg"
+        case "楽語愛を叫びたい！":
+            currentLevel = 10
+            nextlevelScore = 4000000
             lowestScore = 2000001
-            getImage = "Brahms"
-        case "Max":
+            getImage = "Saint-Saens"
+        case "どこまで極めるつもり？":
+            currentLevel = 11
+            nextlevelScore = 8000000
+            lowestScore = 4000001
+            getImage = "Mendelssohn"
+        case "楽語と共に生きていくんだ":
+            currentLevel = 12
+            nextlevelScore = 15000000
+            lowestScore = 8000001
+            getImage = "Prokofiev"
+        case "究極の楽語マスター":
             currentLevel = 13
-            nextlevelScore = 5000001
-            lowestScore = 5000001
-            getImage = "Brahms"
+            nextlevelScore = 1000000000 // バリデーションがあるため到達不可能な値
+            lowestScore = 15000001
+            getImage = ""
         default:
             currentLevel = 1
             nextlevelScore = 10000
@@ -101,5 +101,10 @@ struct Level {
     func nextLevelName() -> String {
         let nextLevelName = levelText[currentLevel]
         return nextLevelName
+    }
+    
+    func culcurateProgressRate(totalScore: Int) -> Float {
+        let rate = Float(totalScore - lowestScore) / Float(nextlevelScore - lowestScore)
+        return Float(rate)
     }
 }

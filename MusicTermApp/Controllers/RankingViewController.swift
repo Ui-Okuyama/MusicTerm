@@ -35,7 +35,8 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("error")
         }
     }
-    
+
+//MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         rankingTableView.delegate = self
@@ -52,7 +53,8 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewWillLayoutSubviews()
         tableViewHeight.constant = modalContentsView.bounds.height - 40
     }
-    
+
+//MARK: -テーブルビュー
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if users == nil {
             return 2
@@ -77,7 +79,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         return cell
     }
-    
+//MARK: -firebase
     private func fetchUsersData(completion: @escaping ([User]) -> Void) {
         Firestore.firestore().collection("users").getDocuments { (snapshots, err) in
             if let err = err {
@@ -96,7 +98,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
             completion(self.users!)
         }
     }
-    
+//MARK: -sort
     private func sortedByBestscore() {
         users!.sort (by: {
             $0.bestScore > $1.bestScore
@@ -108,7 +110,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
             $0.totalScore > $1.totalScore
         })
     }
-    
+//MARK: -GestureRecognizer
     private func tappedGestureSetup() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissModal))
         self.view.addGestureRecognizer(tapGesture)
@@ -124,7 +126,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         if (touch.view!.isDescendant(of: modalContentsView)) {
             return false
         } else {
-        return true
+            return true
         }
     }
 }

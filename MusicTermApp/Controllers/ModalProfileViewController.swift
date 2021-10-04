@@ -9,16 +9,19 @@ import Foundation
 import UIKit
 import Firebase
 
-class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var collectionView: UICollectionView!
+class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
     
     var user:User?
     var images = UserDefaults.standard.array(forKey: "images")
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+//MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupTapGesture()
     }
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
@@ -30,14 +33,15 @@ class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UI
         self.view.layoutIfNeeded()
     }
     
-    func setup() {
+//MARK: -private関数
+    private func setup() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         layout.minimumInteritemSpacing = 0
         collectionView.collectionViewLayout = layout
     }
     
-    func layoutsetup() {
+    private func layoutsetup() {
         let rowOfNumber = 18 / (Int(view.bounds.width - 80) / 140)
         collectionView.frame.size.height = CGFloat(150 * rowOfNumber + 150)
         print(Int(collectionView.frame.size.height))
@@ -47,8 +51,7 @@ class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
-    
-    func fetchUserInfoFromFirebase() {
+    private func fetchUserInfoFromFirebase() {
         let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.getDocument { [self] (document, err) in
             if let err = err {
@@ -59,6 +62,26 @@ class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
+    private func setupTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissModal))
+        self.view.addGestureRecognizer(tapGesture)
+        tapGesture.cancelsTouchesInView = false
+        tapGesture.delegate = self
+    }
+// モーダル外をタップ時にdismiss
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view!.isDescendant(of: scrollView)) {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    @objc func dismissModal() {
+        dismiss(animated: true)
+    }
+    
+//MARK: -コレクションビュー
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images!.count
     }
@@ -96,7 +119,7 @@ class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
 }
-
+//MARK: -Extension
 extension ModalProfileViewController {
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         super.dismiss(animated: flag, completion: completion)
