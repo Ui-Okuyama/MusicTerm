@@ -77,6 +77,8 @@ class ResultViewController: UIViewController {
         }
         updateTotalScoreFirestoreData()
         composerImage.image = UIImage(named: (user?.currentImage)!)
+        let comment = Comment.init(composer: user!.currentImage, score: score!)
+        commentLabel.text = comment.comment
     }
     
     private func labelAndButtonResize() {
