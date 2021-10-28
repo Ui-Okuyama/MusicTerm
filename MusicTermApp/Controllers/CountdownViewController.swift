@@ -14,7 +14,7 @@ class CountdownViewController: UIViewController {
     
     var timer = Timer()
     var count = 0
-    var countText = ["","3", "2", "1", "Start!"]
+    var countText = ["","3", "2", "1", "Start!","Start!"]
     
     var quizdata: String?
     var questionData: QuestionData?
@@ -38,6 +38,9 @@ class CountdownViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         startCountdown()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
+            SEManage.shared.playSE(resource: "カウントダウン")
+        }
     }
     
 //MARK: -private関数
@@ -46,7 +49,7 @@ class CountdownViewController: UIViewController {
             self.count += 1
             self.countLabel.text = String(self.countText[self.count])
             
-            if self.count == 4 {
+            if self.count == 5 {
                 self.presentToQuestionViewController()
                 timer.invalidate()
             }

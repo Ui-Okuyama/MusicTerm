@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,23 +14,23 @@
             <objects>
                 <viewController storyboardIdentifier="QuestionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="QuestionViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPq-Af-6d5">
-                                <rect key="frame" x="43" y="111" width="289" height="133.5"/>
+                                <rect key="frame" x="47.5" y="164" width="319" height="147"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doppelt-Cadebce mit Mordant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvA-2M-Ulp">
-                                        <rect key="frame" x="15.5" y="55.5" width="258.5" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="espressivo[con espressione]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="LvA-2M-Ulp">
+                                        <rect key="frame" x="17" y="62" width="285" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bx2-d1-8sA">
-                                        <rect key="frame" x="12" y="99.5" width="265" height="4"/>
+                                        <rect key="frame" x="13" y="113" width="293" height="4"/>
                                     </progressView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maru" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-ne-gzJ">
-                                        <rect key="frame" x="55.5" y="-22" width="178" height="178"/>
+                                        <rect key="frame" x="61" y="-25" width="197" height="197"/>
                                         <color key="tintColor" red="0.40854041889999998" green="0.69854554930000001" blue="0.11939564950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ssb-ne-gzJ" secondAttribute="height" multiplier="1:1" id="oGp-W8-1Jd"/>
@@ -45,18 +45,19 @@
                                     <constraint firstAttribute="bottom" secondItem="Bx2-d1-8sA" secondAttribute="bottom" constant="30" id="K8k-Cc-AoF"/>
                                     <constraint firstItem="Ssb-ne-gzJ" firstAttribute="width" secondItem="LPq-Af-6d5" secondAttribute="width" multiplier="0.615917" id="MuX-NN-xWl"/>
                                     <constraint firstItem="Bx2-d1-8sA" firstAttribute="width" secondItem="LPq-Af-6d5" secondAttribute="width" multiplier="0.916955" id="eaJ-Ah-3BA"/>
+                                    <constraint firstAttribute="width" secondItem="LPq-Af-6d5" secondAttribute="height" multiplier="289:133" id="ewf-V9-0cF"/>
                                     <constraint firstItem="Ssb-ne-gzJ" firstAttribute="centerY" secondItem="LPq-Af-6d5" secondAttribute="centerY" id="heU-2r-uxy"/>
                                     <constraint firstItem="LvA-2M-Ulp" firstAttribute="centerY" secondItem="LPq-Af-6d5" secondAttribute="centerY" id="mqD-MX-s3M"/>
                                     <constraint firstItem="LvA-2M-Ulp" firstAttribute="centerX" secondItem="LPq-Af-6d5" secondAttribute="centerX" id="w6N-v5-1wp"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OA1-S1-rjc">
-                                <rect key="frame" x="43" y="320.5" width="289" height="233.5"/>
+                                <rect key="frame" x="47.5" y="427.5" width="319" height="313.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9a-Kl-Mdb">
-                                        <rect key="frame" x="0.0" y="0.0" width="289" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="62.5"/>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="後打音を伴うトリル付きのターンああ">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -65,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTg-xh-lg9">
-                                        <rect key="frame" x="0.0" y="93.5" width="289" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="125.5" width="319" height="62.5"/>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Button">
@@ -76,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-P9-3qq">
-                                        <rect key="frame" x="0.0" y="187" width="289" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="251" width="319" height="62.5"/>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Button">
@@ -89,13 +90,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-jJ-wRG">
-                                <rect key="frame" x="248.5" y="88.5" width="30" height="15"/>
+                                <rect key="frame" x="283" y="141.5" width="30" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                                 <color key="textColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lea-Hx-HcC">
-                                <rect key="frame" x="43" y="79" width="49" height="30"/>
+                                <rect key="frame" x="47.5" y="123" width="54" height="33"/>
                                 <color key="backgroundColor" cyan="0.0" magenta="0.58153635309999996" yellow="0.42970628" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lea-Hx-HcC" secondAttribute="height" multiplier="49:30" id="K3K-c9-jiG"/>
@@ -108,19 +109,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROP-2L-0bS">
-                                <rect key="frame" x="280.5" y="76" width="33.5" height="32.5"/>
+                                <rect key="frame" x="315" y="132" width="33.5" height="32.5"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="28"/>
                                 <color key="textColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM3-Yz-3UW">
-                                <rect key="frame" x="317" y="88" width="15" height="15"/>
+                                <rect key="frame" x="351.5" y="141" width="15" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                                 <color key="textColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riK-yS-Qlq" customClass="GADBannerView">
-                                <rect key="frame" x="12.5" y="617" width="350" height="50"/>
+                                <rect key="frame" x="32" y="812" width="350" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Hx3-HW-Dk9"/>
@@ -140,7 +141,6 @@
                             <constraint firstItem="lea-Hx-HcC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="35" id="FeP-AV-uez"/>
                             <constraint firstItem="OA1-S1-rjc" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.35" id="Ggk-uS-cMT"/>
                             <constraint firstItem="ROP-2L-0bS" firstAttribute="leading" secondItem="MdA-jJ-wRG" secondAttribute="trailing" constant="2" id="I3e-xX-DQG"/>
-                            <constraint firstItem="LPq-Af-6d5" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.2" id="InF-5C-CJF"/>
                             <constraint firstItem="ROP-2L-0bS" firstAttribute="bottom" secondItem="MdA-jJ-wRG" secondAttribute="bottom" multiplier="1.05" id="JVO-aT-A67"/>
                             <constraint firstItem="lea-Hx-HcC" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.13" id="Q3N-zf-gxh"/>
                             <constraint firstItem="LPq-Af-6d5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UsR-W9-1VV"/>
@@ -180,7 +180,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wzh-e4-UdW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QvY-75-nRo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

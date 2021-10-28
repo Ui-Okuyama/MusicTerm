@@ -8,24 +8,30 @@
 import UIKit
 import Firebase
 import RealmSwift
+import AVFoundation
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var user: User?
+    var SEAudioPlayer: AVAudioPlayer?
+    var SEAudioPlayer2: AVAudioPlayer?
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
     
     @IBAction func TappedSettingButton(_ sender: Any) {
         presentToSettingViewController()
+        SEManage.shared.playSE(resource: "SE_pupo")
     }
     @IBAction func tappedStartButton(_ sender: Any) {
         presentToHomeViewController()
+        SEManage.shared.playSE(resource: "ボタン決定音")
     }
     
 //MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        SoundManage.shared.playBgm(resource: "BeethovenPop")
         self.signInFirebaseAnonymouslyUser()
     }
     
@@ -42,6 +48,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         settingButton.contentVerticalAlignment = .fill
         startButton.layer.cornerRadius = 15
     }
+   
 //MARK: -画面遷移
     private func presentToHomeViewController() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
@@ -95,7 +102,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         user = User.init(dic: newData)
         //音量初期値セット
         UserDefaults.standard.setValue(1.0, forKey: "bgmVolume")
+        SoundManage.shared.audioPlayer?.volume = 1.0
         UserDefaults.standard.setValue(1.0, forKey: "soundEffectVolume")
+        
     }
 }
 

@@ -33,15 +33,20 @@ class ResultViewController: UIViewController {
     
     @IBAction func tappedHomeButton(_ sender: Any) {
         presentToHomeViewController()
+        SEManage.shared.playSE(resource: "SE_pupo")
+        SoundManage.shared.stopBgm()
+        SoundManage.shared.playBgm(resource: "BeethovenPop")
     }
     @IBAction func tappedListOfTerm(_ sender: Any) {
         presentToListViewController()
+        SEManage.shared.playSE(resource: "SE_pupo")
     }
 //MARK: -ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         setupBanner()
+        SoundManage.shared.playBgm(resource: "hakutyo")
         fetchUserInfoFromFirebase { (user) in
             self.setupWithUserdata()
             self.judgeLevelUp()
@@ -85,7 +90,7 @@ class ResultViewController: UIViewController {
         let vHeight = view.bounds.height
         viewTitleLabel.font = viewTitleLabel.font.withSize( vHeight / 30 )
         viewTitleLabel.sizeToFit()
-        commentLabel.font = commentLabel.font.withSize( vHeight /  40 )
+        commentLabel.font = commentLabel.font.withSize( vHeight /  47 )
         scoreTitleLabel.font = scoreTitleLabel.font.withSize( vHeight / 42 )
         bestscoreLabel.font = bestscoreLabel.font.withSize( vHeight / 42 )
         totalscoreLabel.font = totalscoreLabel.font.withSize( vHeight / 42 )

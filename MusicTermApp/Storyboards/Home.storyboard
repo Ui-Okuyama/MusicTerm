@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -26,23 +26,23 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景白" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-dZ-33A">
-                                <rect key="frame" x="-66" y="0.0" width="507" height="667"/>
+                                <rect key="frame" x="-133.5" y="0.0" width="681" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GQQ-dZ-33A" secondAttribute="height" multiplier="313:412" id="xiE-0Q-KiE"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HJU-XL-SoD">
-                                <rect key="frame" x="37.5" y="173.5" width="300" height="333.5"/>
+                                <rect key="frame" x="41.5" y="216" width="331" height="448"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPi-ts-lJI">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="71.5"/>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="26"/>
-                                        <state key="normal" title="音大入試レベル">
+                                        <state key="normal" title="初心者レベル">
                                             <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
@@ -50,10 +50,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abm-Cl-MSS">
-                                        <rect key="frame" x="0.0" y="93.5" width="300" height="53"/>
+                                        <rect key="frame" x="0.0" y="125" width="331" height="72"/>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="26"/>
-                                        <state key="normal" title="頻出楽語レベル">
+                                        <state key="normal" title="音大入試レベル">
                                             <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
@@ -61,10 +61,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWj-gs-w5d">
-                                        <rect key="frame" x="0.0" y="186.5" width="300" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="250.5" width="331" height="72"/>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="26"/>
-                                        <state key="normal" title="プロの音楽家レベル">
+                                        <state key="normal" title="頻出楽語レベル">
                                             <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
@@ -72,10 +72,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-cC-u0Z">
-                                        <rect key="frame" x="0.0" y="280" width="300" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="376" width="331" height="72"/>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.046897834829999999" yellow="0.048231218239999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="26"/>
-                                        <state key="normal" title="楽語博士レベル">
+                                        <state key="normal" title="プロの音楽家レベル">
                                             <color key="titleColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <connections>
@@ -85,34 +85,34 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-FV-NcU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="123.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mozart" translatesAutoresizingMaskIntoConstraints="NO" id="mRw-Ik-YR4">
-                                        <rect key="frame" x="10" y="22.5" width="79" height="78.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mRw-Ik-YR4">
+                                        <rect key="frame" x="10" y="41.5" width="83" height="83"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mRw-Ik-YR4" secondAttribute="height" multiplier="1:1" id="kFA-Xb-5Mw"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5c9-qZ-Kcl">
-                                        <rect key="frame" x="89" y="26.5" width="273" height="70.5"/>
+                                        <rect key="frame" x="93" y="45.5" width="273" height="74.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさんああああああああ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-8e-DcX">
-                                                <rect key="frame" x="0.0" y="0.0" width="273" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-8e-DcX">
+                                                <rect key="frame" x="0.0" y="0.0" width="273" height="28"/>
                                                 <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="T2h-jL-v9Q">
-                                                <rect key="frame" x="0.0" y="25" width="98.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="33" width="92" height="28"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-HH-Mvr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-HH-Mvr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="28"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="21"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-sW-Ffx">
-                                                        <rect key="frame" x="59.5" y="7.5" width="39" height="13"/>
+                                                        <rect key="frame" x="53" y="12.5" width="39" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="13"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -120,22 +120,22 @@
                                                 </subviews>
                                             </stackView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qkD-0a-gW4">
-                                                <rect key="frame" x="0.0" y="50.5" width="200" height="4"/>
+                                                <rect key="frame" x="0.0" y="66" width="220.5" height="2.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="progressTintColor" name="AccentColor"/>
                                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="43A-ci-q0T">
-                                                <rect key="frame" x="0.0" y="59.5" width="170" height="11"/>
+                                                <rect key="frame" x="0.0" y="73.5" width="168" height="1"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="総スコア：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="1b5-lg-MSF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="68" height="11"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="1"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベストスコア：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="soI-Qz-zXV">
-                                                        <rect key="frame" x="78" y="0.0" width="92" height="11"/>
+                                                        <rect key="frame" x="77" y="0.0" width="91" height="1"/>
                                                         <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -153,12 +153,12 @@
                                     <constraint firstItem="5c9-qZ-Kcl" firstAttribute="centerY" secondItem="mRw-Ik-YR4" secondAttribute="centerY" id="PEa-wF-ttP"/>
                                     <constraint firstItem="mRw-Ik-YR4" firstAttribute="leading" secondItem="d9g-FV-NcU" secondAttribute="leading" constant="10" id="Vlv-53-G6D"/>
                                     <constraint firstItem="mRw-Ik-YR4" firstAttribute="centerY" secondItem="d9g-FV-NcU" secondAttribute="centerY" id="pkb-Kz-T4n"/>
-                                    <constraint firstItem="mRw-Ik-YR4" firstAttribute="width" secondItem="d9g-FV-NcU" secondAttribute="width" multiplier="0.21" id="r0u-t2-jqc"/>
+                                    <constraint firstItem="mRw-Ik-YR4" firstAttribute="width" secondItem="d9g-FV-NcU" secondAttribute="width" multiplier="0.2" id="r0u-t2-jqc"/>
                                     <constraint firstItem="5c9-qZ-Kcl" firstAttribute="height" secondItem="mRw-Ik-YR4" secondAttribute="height" multiplier="0.9" id="xlU-ka-3tH"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbF-z0-EyT" customClass="GADBannerView">
-                                <rect key="frame" x="12.5" y="617" width="350" height="50"/>
+                                <rect key="frame" x="32" y="812" width="350" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8ve-89-50W"/>
@@ -166,10 +166,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zxD-dR-0nG">
-                                <rect key="frame" x="86.5" y="547" width="202.5" height="31"/>
+                                <rect key="frame" x="96" y="704" width="222" height="34.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-95-T0t">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="34.5"/>
                                         <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cnq-95-T0t" secondAttribute="height" multiplier="3:1" id="x9b-LV-Uge"/>
@@ -183,7 +183,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygs-c4-INp">
-                                        <rect key="frame" x="108.5" y="0.0" width="94" height="31"/>
+                                        <rect key="frame" x="118.5" y="0.0" width="103.5" height="34.5"/>
                                         <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ygs-c4-INp" secondAttribute="height" multiplier="3:1" id="gVu-Sl-JgS"/>
@@ -255,7 +255,7 @@
                 <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l0E-kf-cBG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mhA-7I-cEe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -272,7 +272,7 @@
             <objects>
                 <viewController storyboardIdentifier="RankingViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UJr-gc-Wl4" customClass="RankingViewController" customModule="MusicTermApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xx1-kr-cnQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cN4-xl-6c4">
@@ -281,10 +281,10 @@
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DJ-P0-0p7">
-                                <rect key="frame" x="37" y="66.5" width="301" height="534"/>
+                                <rect key="frame" x="41" y="89.5" width="332" height="717"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dkp-va-PtU">
-                                        <rect key="frame" x="0.0" y="0.0" width="301" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="332" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="HXd-54-FEP"/>
                                         </constraints>
@@ -298,17 +298,17 @@
                                         </connections>
                                     </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cSD-DZ-zLd">
-                                        <rect key="frame" x="0.0" y="40" width="301" height="478"/>
+                                        <rect key="frame" x="0.0" y="40" width="332" height="478"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="478" id="B8S-U7-h24"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingTableViewCell" id="5IF-5x-BZV" customClass="RankingTableViewCell" customModule="MusicTermApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.5" width="301" height="60"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="332" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5IF-5x-BZV" id="UOd-vU-wtg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="301" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="332" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nyw-VS-RkS">
@@ -324,13 +324,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ナナシさん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gj9-mD-Gy8">
-                                                            <rect key="frame" x="103" y="9.5" width="85" height="17"/>
+                                                            <rect key="frame" x="103" y="8" width="85" height="20"/>
                                                             <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="103444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2bv-6b-6cN">
-                                                            <rect key="frame" x="103" y="33.5" width="65" height="17"/>
+                                                            <rect key="frame" x="103" y="32" width="57" height="20"/>
                                                             <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -396,7 +396,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mozart" width="534" height="699"/>
         <image name="背景白" width="208" height="281.66665649414062"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

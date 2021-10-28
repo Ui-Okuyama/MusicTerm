@@ -35,42 +35,42 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mozart" translatesAutoresizingMaskIntoConstraints="NO" id="sNa-VV-SKV">
-                                <rect key="frame" x="121" y="106" width="133" height="133.5"/>
+                                <rect key="frame" x="121" y="111" width="133" height="133.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sNa-VV-SKV" secondAttribute="height" multiplier="1:1" id="4Wp-Sa-eV3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tYk-BX-DTc">
-                                <rect key="frame" x="110.5" y="420.5" width="154" height="40"/>
+                                <rect key="frame" x="110.5" y="447.5" width="154" height="40"/>
                                 <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="40"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答えられない楽語はない" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5IA-lE-SmJ">
-                                <rect key="frame" x="10" y="348.5" width="355" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="専科は楽器？それとも…楽語？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5IA-lE-SmJ">
+                                <rect key="frame" x="10" y="343.5" width="355" height="64"/>
                                 <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="32"/>
                                 <color key="textColor" red="0.86880514505026218" green="0.39581629613062719" blue="0.29054548356916521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-iD-IO8">
-                                <rect key="frame" x="62.5" y="254.5" width="250" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-iD-IO8">
+                                <rect key="frame" x="62.5" y="259.5" width="250" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベストスコア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bhp-Te-dIc">
-                                <rect key="frame" x="136.5" y="475.5" width="102" height="17"/>
+                                <rect key="frame" x="136.5" y="502.5" width="102" height="17"/>
                                 <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="17"/>
                                 <color key="textColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="総スコア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FaZ-yN-QCc">
-                                <rect key="frame" x="153.5" y="398.5" width="68" height="17"/>
+                                <rect key="frame" x="153.5" y="425.5" width="68" height="17"/>
                                 <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="17"/>
                                 <color key="textColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レベル" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-QX-hCF">
-                                <rect key="frame" x="160.5" y="322.5" width="54" height="18"/>
+                                <rect key="frame" x="160.5" y="317.5" width="54" height="18"/>
                                 <fontDescription key="fontDescription" name="UmiYamaLogoGothic-R" family="UmiYamaLogoGothic" pointSize="18"/>
                                 <color key="textColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gqW-f6-lFo">
-                                <rect key="frame" x="149" y="497.5" width="77" height="40"/>
+                                <rect key="frame" x="149" y="524.5" width="77" height="40"/>
                                 <fontDescription key="fontDescription" name="YasashisaGothicBoldV2-bold" family="YasashisaGothicBoldV2" pointSize="40"/>
                                 <color key="textColor" red="0.40854041889999998" green="0.69854554929933343" blue="0.11939564950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jca-dJ-E9r">
-                                <rect key="frame" x="233" y="106" width="21" height="22"/>
+                                <rect key="frame" x="233" y="111" width="21" height="22"/>
                                 <color key="tintColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <state key="normal" image="square.and.pencil" catalog="system">
                                     <color key="titleColor" cyan="0.86485002420000001" magenta="0.43205570669999999" yellow="0.0" black="0.1937688367" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>

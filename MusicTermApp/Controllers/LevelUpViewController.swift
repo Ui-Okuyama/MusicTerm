@@ -19,6 +19,7 @@ class LevelUpViewController: UIViewController {
     @IBOutlet weak var levelUpImageView: UIImageView!
     @IBOutlet weak var closeButton: UIButton!
     @IBAction func tappedCloseButton(_ sender: Any) {
+        SEManage.shared.playSE(resource: "SE_pupo")
         tapCount += 1
         tappedButton()
     }
@@ -26,26 +27,31 @@ class LevelUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        SEManage.shared.playSE(resource: "レベルアップ")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    }
+    
     private func setup() {
-        titleLabel.text = levelText! + "レベル"
+        titleLabel.text = levelText! + "\nレベル"
     }
     
     private func labelAndButtonResize() {
         let vHeight = self.view.bounds.height
-        titleLabel.font = titleLabel.font.withSize( vHeight / 30)
+        titleLabel.font = titleLabel.font.withSize( vHeight / 35)
         closeButton.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-R", size: vHeight / 27)
     }
     
     private func tappedButton() {
         if tapCount == 1 {
             levelUpImageView.image = UIImage(named: level!.getImage)
-            titleLabel.text = "\(level!.getImage)を選択できるようになりました！"
+            titleLabel.text = "\(level!.getImage)を\n選択できるようになりました！"
             closeButton.setTitle("閉じる", for: .normal)
             updateImages()
         } else {

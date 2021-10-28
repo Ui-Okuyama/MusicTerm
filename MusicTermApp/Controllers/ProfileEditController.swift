@@ -12,6 +12,7 @@ import Firebase
 class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
     var user:User?
     var images:Array<String>?
+    let maxLength = 10
     
     @IBOutlet weak var iconName: UILabel!
     @IBOutlet weak var level: UILabel!
@@ -27,9 +28,11 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func tappedSaveButton(_ sender: Any) {
         updateFirestoreData()
         navigationController?.popViewController(animated: true)
+        SEManage.shared.playSE(resource: "SE_pupo")
     }
     @IBAction func tappedChangeImageButton(_ sender: Any) {
         presentToModalView()
+        SEManage.shared.playSE(resource: "SE_pupo")
     }
     
 //MARK: -ライフサイクル
@@ -37,6 +40,7 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         setupViews()
         setupTapGestureForProfileImage()
+        nameTextField.addTarget(self, action: #selector(textFieldEditingChanged(textField:)), for: .editingChanged)
     }
     
     override func viewWillLayoutSubviews() {
@@ -45,10 +49,6 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-    @objc func tappedProfileImage(_ sender: UITapGestureRecognizer) {
-        presentToModalView()
     }
     
 //MARK: -レイアウトセットアップ
@@ -67,19 +67,30 @@ class ProfileEditController: UIViewController, UIGestureRecognizerDelegate {
         level.font = level.font.withSize(vHeight / 45)
         totalscore.font = totalscore.font.withSize(vHeight / 45)
         bestscore.font = bestscore.font.withSize(vHeight / 45)
-        levelLabel.font = levelLabel.font.withSize(vHeight / 20)
+        levelLabel.font = levelLabel.font.withSize(vHeight / 25)
         totalscoreLabel.font = totalscoreLabel.font.withSize(vHeight / 17)
         bestscoreLabel.font = bestscoreLabel.font.withSize(vHeight / 17)
         let fontsize = Int(saveButton.frame.size.height / 2.3)
         saveButton.titleLabel?.font = UIFont(name: "JK-Maru-Gothic-M", size: CGFloat(fontsize))
-        nameTextField.font = nameTextField.font?.withSize(vHeight / 20)
     }
+ 
+//テキストフィールドの文字数制限
+    @objc func textFieldEditingChanged(textField: UITextField) {
+        guard let text = textField.text else { return }
+        textField.text = String(text.prefix(maxLength))
+    }
+    
 //MARK: -TapGesture
     private func setupTapGestureForProfileImage() {
         profileImage.isUserInteractionEnabled = true
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedProfileImage(_:)))
         profileImage.addGestureRecognizer(tapGesture)
         tapGesture.delegate = self
+    }
+    
+    @objc func tappedProfileImage(_ sender: UITapGestureRecognizer) {
+        SEManage.shared.playSE(resource: "SE_pupo")
+        presentToModalView()
     }
     
 //MARK: -Firebase

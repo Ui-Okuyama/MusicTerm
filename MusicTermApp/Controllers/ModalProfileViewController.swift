@@ -105,6 +105,7 @@ class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        SEManage.shared.playSE(resource: "SE_pupo")
         let selectImage = images![indexPath.row]
         let userRef = Firestore.firestore().collection("users").document(UserDefaults.standard.string(forKey: "uid")!)
         userRef.updateData(["currentImage" : selectImage]) { err in

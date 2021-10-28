@@ -36,8 +36,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtk-hH-kem">
                                 <rect key="frame" x="46.5" y="203.5" width="282" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まだ目標には程遠いな。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWQ-fR-vKT">
-                                        <rect key="frame" x="43.5" y="35" width="195" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWQ-fR-vKT">
+                                        <rect key="frame" x="141" y="44" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                                 <color key="textColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.30975982029999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beethoven" translatesAutoresizingMaskIntoConstraints="NO" id="8j2-NU-HfO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8j2-NU-HfO">
                                 <rect key="frame" x="122" y="92.5" width="131" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8j2-NU-HfO" secondAttribute="height" multiplier="1:1" id="xFE-Aa-ppQ"/>
@@ -191,18 +191,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SN5-gj-3Py">
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="356"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="91e-MR-Bgy">
-                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mendelssohnを選べるようになりました！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="91e-MR-Bgy">
+                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="53.5"/>
                                                 <color key="backgroundColor" cyan="0.8767957354" magenta="0.54539511090000004" yellow="0.33497000739999999" black="0.13805384139999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="28"/>
+                                                <fontDescription key="fontDescription" name="JK-Maru-Gothic-M" family="JK Maru-Gothic" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LevelUp" translatesAutoresizingMaskIntoConstraints="NO" id="Jhy-MA-QL1">
-                                                <rect key="frame" x="0.0" y="40" width="262.5" height="262.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Jhy-MA-QL1" secondAttribute="height" multiplier="1:1" id="f87-Sj-flj"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="53.5" width="262.5" height="249"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-8l-UBZ">
                                                 <rect key="frame" x="0.0" y="302.5" width="262.5" height="53.5"/>
@@ -216,6 +213,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="91e-MR-Bgy" firstAttribute="height" secondItem="SN5-gj-3Py" secondAttribute="height" multiplier="0.15" id="9cI-0b-BaL"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -252,7 +252,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Beethoven" width="345" height="400"/>
         <image name="LevelUp" width="421" height="420"/>
         <image name="背景白" width="208" height="281.66665649414062"/>
         <systemColor name="labelColor">

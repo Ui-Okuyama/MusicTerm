@@ -45,7 +45,7 @@ struct Level {
         case "一人前の楽語イスト":
             currentLevel = 6
             nextlevelScore = 250000
-            lowestScore = 120001
+            lowestScore = 150001
             getImage = "Liszt"
         case "ステキな楽語イスト":
             currentLevel = 7

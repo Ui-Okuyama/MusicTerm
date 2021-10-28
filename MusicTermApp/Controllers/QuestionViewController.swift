@@ -39,6 +39,9 @@ class QuestionViewController: UIViewController {
     @IBAction func tappedBackHomeButton(_ sender: Any) {
         presentToHomeViewController()
         resetTimer()
+        SoundManage.shared.stopBgm()
+        SEManage.shared.playSE(resource: "SE_pupo")
+        SoundManage.shared.playBgm(resource: "BeethovenPop")
     }
     @IBAction func tappedAnswerButton1(_ sender: Any) {
         questionData?.userChoiceAnswer = answerButton1.currentTitle
@@ -58,6 +61,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupBanner()
+        SoundManage.shared.playBgm(resource: "MozartPop")
     }
     
     override func viewWillLayoutSubviews() {
@@ -111,11 +115,11 @@ class QuestionViewController: UIViewController {
         nokoriLabel.font = nokoriLabel.font.withSize( vHeight / 47 )
         monnLabel.font = monnLabel.font.withSize( vHeight / 47 )
         remainingQuestionOfNumber.font = remainingQuestionOfNumber.font.withSize( vHeight / 25 )
-        let fontsize = Int(answerButton1.frame.size.height / 2.5)
+        let fontsize = Int(answerButton1.frame.size.width / 18 )
         answerButton1.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
         answerButton2.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
         answerButton3.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
-        let backfontsize = Int(answerButton1.frame.size.height / 2.5)
+        let backfontsize = Int(answerButton1.frame.size.height / 3)
         backHomeButton.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(backfontsize))
     }
 //MARK: -タイマー系
@@ -133,6 +137,7 @@ class QuestionViewController: UIViewController {
     }
     
     @objc func doneTimer() {
+        allAnswerButtonEnabled()
         afterTappedAnswerButton()
     }
     
@@ -147,12 +152,12 @@ class QuestionViewController: UIViewController {
         timeFinisedToSolve = Date() //解答時間を計算するための
         
         if questionData!.isCorrect() {
-            print("correct")
+            SEManage.shared.playSE(resource: "クイズ正解")
             marubatsuImage.image = UIImage(named: "maru")
             marubatsuImage.tintColor = UIColor.rgb(red: 104, green: 178, blue: 30, alpha: 1)
             culcurateScore()
         } else {
-            print("false")
+            SEManage.shared.playSE(resource: "クイズ不正解")
             marubatsuImage.image = UIImage(named: "batsu")
             marubatsuImage.tintColor = UIColor.rgb(red: 222, green: 101, blue: 74, alpha: 1)
         }
@@ -241,6 +246,7 @@ class QuestionViewController: UIViewController {
         let resultViewController = storyboards.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
         resultViewController.modalPresentationStyle = .fullScreen
         resultViewController.score = totalScore
+        SoundManage.shared.stopBgm()
         print(totalScore)
         navigationController?.pushViewController(resultViewController, animated: true)
     }

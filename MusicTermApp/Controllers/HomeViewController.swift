@@ -32,21 +32,31 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func tappedDifficultyButton1(_ sender: Any) {
         presentToCountdownView(quizdata: "quizdataEasy")
+        SoundManage.shared.stopBgm()
+        SEManage.shared.playSE(resource: "SE_BDG~")
     }
     @IBAction func tappedDifficultyButton2(_ sender: Any) {
         presentToCountdownView(quizdata: "quizdataNormal")
+        SoundManage.shared.stopBgm()
+        SEManage.shared.playSE(resource: "SE_BDG~")
     }
     @IBAction func tappedDifficultyButton3(_ sender: Any) {
         presentToCountdownView(quizdata: "quizdataHard")
+        SoundManage.shared.stopBgm()
+        SEManage.shared.playSE(resource: "SE_BDG~")
     }
     @IBAction func tappedDifficultyButton4(_ sender: Any) {
         presentToCountdownView(quizdata: "quizdataLunatic")
+        SoundManage.shared.stopBgm()
+        SEManage.shared.playSE(resource: "SE_BDG~")
     }
     @IBAction func tappedToListButton(_ sender: Any) {
         presentToListViewController()
+        SEManage.shared.playSE(resource: "SE_pupo")
     }
     @IBAction func tappedToRankingButton(_ sender: Any) {
         presentToRankingViewController()
+        SEManage.shared.playSE(resource: "SE_pupo")
     }
     
 //MARK: - ライフサイクル
@@ -94,8 +104,8 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func labelAndButtonResize() {
         let vHeight = self.view.bounds.height
-        userName.font = userName.font.withSize(vHeight / 32)
-        levelLabel.font = levelLabel.font.withSize(vHeight / 40)
+        userName.font = userName.font.withSize(vHeight / 38)
+        levelLabel.font = levelLabel.font.withSize(vHeight / 45)
         bestScoreLabel.font = bestScoreLabel.font.withSize(vHeight / 60)
         totalScoreLabel.font = totalScoreLabel.font.withSize(vHeight / 60)
         level.font = level.font.withSize(vHeight / 60)
@@ -149,6 +159,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
 //MARK: -画面遷移
     
     @objc func tappedProfileView(_ sender: UITapGestureRecognizer) {
+        SEManage.shared.playSE(resource: "SE_pupo")
         let storyBoard = UIStoryboard(name: "ProfileEdit", bundle: nil)
         let profileEditController = storyBoard.instantiateViewController(identifier: "ProfileEditController") as! ProfileEditController
         profileEditController.modalPresentationStyle = .fullScreen
@@ -157,10 +168,11 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
         
     private func presentToCountdownView(quizdata: String) {
-            let storyBoard = UIStoryboard(name: "Countdown", bundle: nil)
-            let countdownViewController = storyBoard.instantiateViewController(identifier: "CountdownViewController") as! CountdownViewController
-            countdownViewController.quizdata = quizdata
-            navigationController?.pushViewController(countdownViewController, animated: true)
+        let storyBoard = UIStoryboard(name: "Countdown", bundle: nil)
+        let countdownViewController = storyBoard.instantiateViewController(identifier: "CountdownViewController") as! CountdownViewController
+        countdownViewController.quizdata = quizdata
+        SoundManage.shared.stopBgm()
+        navigationController?.pushViewController(countdownViewController, animated: true)
     }
     
     private func presentToListViewController() {

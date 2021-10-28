@@ -7,8 +7,11 @@
 
 import Foundation
 import UIKit
+import SafariServices
+
 class SettingViewController : UIViewController {
     
+    let appID = ""
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var twitterButton: UIButton!
@@ -18,6 +21,7 @@ class SettingViewController : UIViewController {
     @IBAction func touchUpBGMSlider(_ sender: UISlider) {
         let volume = Float( round(sender.value * 10) / 10 ) // 小数第一位まで
         UserDefaults.standard.setValue(volume,forKey: "bgmVolume")
+        SoundManage.shared.audioPlayer?.volume = volume
     }
     @IBAction func touchUpSoundEffect(_ sender: UISlider) {
         let volume = Float( round(sender.value * 10) / 10 ) // 小数第一位まで
@@ -25,7 +29,22 @@ class SettingViewController : UIViewController {
     }
     @IBAction func tappedSettingButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        SEManage.shared.playSE(resource: "SE_pupo")
     }
+    @IBAction func tappedReviewButton(_ sender: Any) {
+        let url = URL(string: "https://itunes.apple.com/jp/app/id\(appID)")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func tappedTwitterButton(_ sender: Any) {
+        let url = URL(string: "https://twitter.com/U_Okuyama_Devlp")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

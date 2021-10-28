@@ -31,6 +31,9 @@
                                 <state key="normal" title="レビュー">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedReviewButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ceZ-4W-I0O"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-wW-gX4">
                                 <rect key="frame" x="20.5" y="240" width="323.5" height="30"/>
@@ -60,6 +63,9 @@
                                 <state key="normal" title="@U_Okuyama_Devlp">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedTwitterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tta-2x-Qp7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBu-T8-xlD">
                                 <rect key="frame" x="30" y="30" width="35" height="35"/>
