@@ -43,11 +43,10 @@ class ModalProfileViewController: UIViewController, UICollectionViewDelegate, UI
     
     private func layoutsetup() {
         let rowOfNumber = 18 / (Int(view.bounds.width - 80) / 140)
-        collectionView.frame.size.height = CGFloat(150 * rowOfNumber + 150)
+        collectionView.frame.size.height = CGFloat(180 * rowOfNumber + 150)
         print(Int(collectionView.frame.size.height))
         if scrollView.frame.size.height > collectionView.frame.size.height {
             scrollView.frame.size.height = collectionView.frame.size.height
-            print("resize")
         }
     }
     

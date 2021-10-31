@@ -115,7 +115,7 @@ class QuestionViewController: UIViewController {
         nokoriLabel.font = nokoriLabel.font.withSize( vHeight / 47 )
         monnLabel.font = monnLabel.font.withSize( vHeight / 47 )
         remainingQuestionOfNumber.font = remainingQuestionOfNumber.font.withSize( vHeight / 25 )
-        let fontsize = Int(answerButton1.frame.size.width / 18 )
+        let fontsize = Int(answerButton1.frame.size.width / 19 )
         answerButton1.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
         answerButton2.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))
         answerButton3.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(fontsize))

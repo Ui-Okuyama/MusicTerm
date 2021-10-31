@@ -15,6 +15,7 @@ class SettingViewController : UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var twitterButton: UIButton!
+    @IBOutlet weak var privacyPolicyButton: UIButton!
     @IBOutlet weak var BGMSlider: UISlider!
     @IBOutlet weak var soundEffectSlider: UISlider!
     
@@ -42,7 +43,12 @@ class SettingViewController : UIViewController {
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }
-        
+    }
+    @IBAction func tappedPrivacyButton(_ sender: Any) {
+        let url = URL(string: "https://musictermapp.web.app/")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
     }
     
     
@@ -57,6 +63,7 @@ class SettingViewController : UIViewController {
         closeButton.contentVerticalAlignment = .fill
         reviewButton.layer.cornerRadius = 10
         twitterButton.layer.cornerRadius = 10
+        privacyPolicyButton.layer.cornerRadius = 10
         BGMSlider.value = UserDefaults.standard.float(forKey: "bgmVolume")
         soundEffectSlider.value = UserDefaults.standard.float(forKey: "soundEffectVolume")
     }
