@@ -2,7 +2,7 @@
 //  CountdownViewController.swift
 //  MusicTermApp
 //
-//  Created by 槙和馬 on 2021/08/29.
+//  Created by Ui-Okuyama on 2021/08/29.
 //
 
 import Foundation
