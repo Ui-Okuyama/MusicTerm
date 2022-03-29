@@ -2,7 +2,7 @@
 //  LevelUpViewController.swift
 //  MusicTermApp
 //
-//  Created by 槙和馬 on 2021/09/09.
+//  Created by Ui-Okuyama on 2021/09/09.
 //
 
 import Foundation
